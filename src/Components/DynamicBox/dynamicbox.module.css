@@ -26,6 +26,7 @@
   height: 80%;
   cursor: pointer;
   background-color: white;
+  box-shadow: 0 0 10px 1px #777;
   transition: all 0.3s ease-in-out;
 }
 .levelTwo {
@@ -33,6 +34,7 @@
   height: 18%;
   cursor: pointer;
   background-color: white;
+  box-shadow: 0 0 10px 1px #777;
   transition: all 0.3s ease-in-out;
 }
 .levelThree {
@@ -40,6 +42,7 @@
   height: 49%;
   cursor: pointer;
   background-color: white;
+  box-shadow: 0 0 10px 1px #777;
   transition: all 0.3s ease-in-out;
 }
 

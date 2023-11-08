@@ -10,12 +10,6 @@
   background-size: cover;
 }
 
-#menu,
-#logo,
-#user {
-  opacity: 1 !important;
-  color: #ffffff;
-}
 /* width */
 ::-webkit-scrollbar {
   width: 5px;

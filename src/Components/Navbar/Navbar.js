@@ -8,13 +8,13 @@ import user from '../../Assets/IconImage/profile-user.png';
 const Navbar = () => {
     return (
         <div className={Style.NavbarWrapper} >
-            <div className={Style.menu} id='menu'>
+            <div className={Style.menu}>
                 <MenuIcon fillColor={'white'} />
             </div>
-            <div className={Style.logo} id='logo'>
+            <div className={Style.logo}>
                 <img src={PackmanLogo} alt='Packman_Logo' />
             </div>
-            <div className={Style.userAndNotification} id='user'>
+            <div className={Style.userAndNotification}>
                 <img src={notificationBell} alt='notification_bell' />
                 <img src={user} alt='user' />
             </div>
