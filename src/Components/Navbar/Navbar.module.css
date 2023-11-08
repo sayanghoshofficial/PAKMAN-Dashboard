@@ -3,7 +3,7 @@
   height: 12%;
   min-height: 56px;
   margin-bottom: 20px;
-  background-color:rgba(0, 0, 0, 0.5);;
+  background-color: rgba(0, 0, 0, 0.5);
   padding-left: 80px;
   padding-right: 80px;
   display: flex;
@@ -17,6 +17,9 @@
   align-items: center;
   justify-content: center;
 }
+.menu>img{
+  width: 50px;
+}
 
 .logo {
   width: 100px;
@@ -25,6 +28,9 @@
   align-items: center;
   justify-content: center;
 }
+.logo>img{
+  width: 50px;
+}
 .userAndNotification {
   width: 100px;
   height: 100%;
@@ -32,6 +38,21 @@
   align-items: center;
   justify-content: space-between;
 }
-.userAndNotification>img{
-    width: 24px;
+.userAndNotification > img {
+  width: 24px;
+}
+
+@media screen and (min-width: 1900px) {
+  .NavbarWrapper {
+    height: 76px;
+  }
+  .menu>img{
+    width: 70px;
+  }
+  .logo > img {
+    width: 70px;
+  }
+  .userAndNotification > img {
+    width: 30px;
+  }
 }
