@@ -46,6 +46,12 @@
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 1900px) {
+  .DynamicElementContainer {
+    height: 800px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .DynamicElementContainer {
     height: auto;

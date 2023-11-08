@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 .app {
+  min-height: 100vh;
   background-image: url(./Assets/BackgroundImage/pacman_bg.jpg);
   background-position: center;
   background-repeat: no-repeat;

@@ -3,7 +3,7 @@
   height: 12%;
   min-height: 56px;
   margin-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(29, 28, 28, 0.7);
   padding-left: 80px;
   padding-right: 80px;
   display: flex;
@@ -32,7 +32,7 @@
   width: 50px;
 }
 .userAndNotification {
-  width: 100px;
+  width: 85px;
   height: 100%;
   display: flex;
   align-items: center;
