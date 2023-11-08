@@ -8,19 +8,11 @@ const DynamicElement = () => {
     const [classes, setClasses] = useState(DynamicElementClassData[0]);
 
     const handleClick = (index) => {
-        if (index === 1) {
-            setClasses(DynamicElementClassData[0])
-        } else if (index === 2) {
-            setClasses(DynamicElementClassData[1])
-        } else if (index === 3) {
-            setClasses(DynamicElementClassData[2])
-        } else if (index === 4) {
-            setClasses(DynamicElementClassData[3])
-        } else if (index === 5) {
-            setClasses(DynamicElementClassData[4])
-        } else if (index === 6) {
-            setClasses(DynamicElementClassData[5])
-        }
+        if (index) {
+            setClasses(DynamicElementClassData[index - 1])
+        }else{
+            return;
+        } 
     };
 
     return (
