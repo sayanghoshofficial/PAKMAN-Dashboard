@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Style from './dynamicbox.module.css';
+import InnerHeader from './InnerHeader/InnerHeader';
 
 const DynamicElement = () => {
     const divArr = [1, 2, 3, 4, 5, 6];
@@ -72,6 +73,7 @@ const DynamicElement = () => {
 
     return (
         <div className={Style.DynamicElementContainer}>
+            <InnerHeader />
             <div className={Style.DynamicElementWrapper}>
                 {divArr.map((index) => (
                     <div

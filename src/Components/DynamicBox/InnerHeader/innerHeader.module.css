@@ -1,3 +1,15 @@
 .InnerHeader{
-    width: 90%;
+    width: 89.5%;
+    height: 5%;
+    min-height: 46px;
+    background-color: white;
+    /* border: 2px solid blue; */
+}
+
+
+@media screen and (max-width: 1024px) {
+    .InnerHeader{
+        width: 90%;
+        margin-bottom: 15px;
+    }
 }
