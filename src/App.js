@@ -1,10 +1,14 @@
-import { DynamicElement } from "./Components";
+import { DynamicElement, Navbar } from "./Components";
 
 function App() {
   return (
-   <>
-   <DynamicElement/>
-   </>
+
+    <div className="app">
+
+      <Navbar />
+      <DynamicElement />
+    </div>
+
   );
 }
 

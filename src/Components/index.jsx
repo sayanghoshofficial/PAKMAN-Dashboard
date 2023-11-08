@@ -1,4 +1,5 @@
 import DynamicElement from "./DynamicBox/DynamicElement";
+import Navbar from "./Navbar/Navbar";
 
 
-export { DynamicElement };
+export { DynamicElement, Navbar };
