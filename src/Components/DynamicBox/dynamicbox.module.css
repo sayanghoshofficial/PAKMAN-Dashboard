@@ -1,0 +1,41 @@
+.DynamicElementContainer{
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.DynamicElementWrapper{
+    width: 90%;
+    height: 90%;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.levelOne{
+    width:50%;
+    height: 80%;
+    cursor: pointer;
+    border: 2px solid green;
+    transition: all 0.3s ease-in-out;
+}
+.levelTwo{
+    width: 50%;
+    height: 18%;
+    cursor: pointer;
+    border: 2px solid greenyellow;
+    transition: all 0.3s ease-in-out;
+}
+.levelThree{
+    width: 23%;
+    height: 49%;
+    cursor: pointer;
+    border: 2px solid gold;
+    transition: all 0.3s ease-in-out;
+}
