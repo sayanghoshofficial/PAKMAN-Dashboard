@@ -1,30 +1,46 @@
 import React, { useState } from 'react';
 import Style from './dynamicbox.module.css';
 import InnerHeader from './InnerHeader/InnerHeader';
-import { DynamicElementClassData } from '../../Data';
+import { DynamicElementClassData, DynamicElementGraphData } from '../../Data';
+import { LevelOneDiv, LevelTwoDiv, LevelThreeDiv } from './LevelWiseDiv';
 
 const DynamicElement = () => {
-    const divArr = [1, 2, 3, 4, 5, 6];
     const [classes, setClasses] = useState(DynamicElementClassData[0]);
 
     const handleClick = (index) => {
         if (index) {
             setClasses(DynamicElementClassData[index - 1])
-        }else{
-            return;
-        } 
+        }
+    };
+    // Define a function for mapping class names to components
+    const mapClassesToComponents = (c, data) => {
+        if (c === Style.levelOne) {
+            return <LevelOneDiv
+                data={data}
+            />;
+        } else if (c === Style.levelTwo) {
+            return <LevelTwoDiv
+                data={data}
+            />;
+        } else {
+            return <LevelThreeDiv
+                data={data}
+            />;
+        }
     };
 
     return (
         <div className={Style.DynamicElementContainer}>
             <InnerHeader />
             <div className={Style.DynamicElementWrapper}>
-                {divArr.map((index) => (
+                {DynamicElementGraphData.map((data, i) => (
                     <div
-                        key={index}
-                        className={classes[index - 1]}
-                        onClick={() => handleClick(index)}
-                    ></div>
+                        key={data.id}
+                        className={classes[data.id - 1]}
+                        onClick={() => handleClick(data.id)}
+                    >
+                        {mapClassesToComponents(classes[i], data)}
+                    </div>
                 ))}
             </div>
         </div>

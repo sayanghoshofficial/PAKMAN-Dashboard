@@ -1,0 +1,71 @@
+/* Level One div */
+.LevelOneDivWapper {
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid red; */
+
+  padding: 30px 44px;
+}
+.LevelOneDivInner {
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.nameAndLogo {
+  width: 100%;
+  height: 10%;
+  /* border: 2px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777777;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+}
+.nameAndLogo > img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.nameAndLogo > p {
+  transition: all 0.3s ease-in-out;
+}
+.GraphSpace {
+  width: 100%;
+  height: 70%;
+  /* border: 2px solid green; */
+}
+.totalCounting {
+  width: 100%;
+  height: 10%;
+  color: #ed0295ff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.BigValue {
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+.unit{
+  margin-left: 2px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1600px) {
+  .nameAndLogo {
+    font-size: 20px;
+  }
+  .nameAndLogo > img {
+    width: 20px;
+    height: 20px;
+  }
+}
