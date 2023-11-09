@@ -19,7 +19,13 @@ const DynamicElementGraphData = [
             value:'$24.0K',
             rightTop:'/Day',
             rightDown:'Run Rate'
-        }
+        },
+        thirdBox:[
+            {
+                value:'$0.40',
+                unit:'/Instance HR'
+            }
+        ]
     },
     {
         id: 2,

@@ -43,16 +43,21 @@ const BarWithLineGraph = ({ graphData }) => {
     <div className={Style.BarWithLineGraphCointainer} >
       <div className={Style.graphWrapper}>
         <ResponsiveContainer width="100%" height="90%">
-          <ComposedChart data={graphData} width={400} height={40} barGap={0}>
+          <ComposedChart
+            data={graphData}
+            width={400}
+            height={40}
+            barGap={0}
+          >
             <CartesianGrid stroke="#ccc" vertical={false} />
-            <XAxis dataKey="name" />
+            <XAxis dataKey="name" tick={{ fontSize: '12px' }} />
             <YAxis
               domain={[0, 1000000]}
               axisLine={false}
               ticks={generateYAxisTicks()}
               tick={{ fontSize: '12px' }}
               tickFormatter={formatYAxisTick}
-              label={{ value: 'COST', angle: -90, position: 'insideLeft'  }}
+              label={{ value: 'COST', angle: -90, position: 'insideLeft' }}
             />
             <YAxis
               yAxisId="right"
@@ -63,15 +68,28 @@ const BarWithLineGraph = ({ graphData }) => {
               tick={{ fontSize: '12px' }}
               label={{ value: 'RUN RATE', angle: 90, position: 'insideRight' }}
             />
-            <Tooltip 
-          
+            <Tooltip
+
               wrapperStyle={{ backgroundColor: '#292929ff' }}
-              contentStyle={{ backgroundColor: 'rgba (0, 0, 0, 0.5)', border: 'none' ,color:'#fff'}}
-              labelStyle={{ display:'none'}} />
+              contentStyle={{ backgroundColor: 'rgba (0, 0, 0, 0.5)', border: 'none', color: '#fff' }}
+              labelStyle={{ display: 'none' }} />
             <Legend wrapperStyle={{ fontSize: '10px', bottom: '-13px' }} />
-            <Bar dataKey='ACTUAL COST' fill='#ed0295' barSize={25} />
-            <Bar dataKey="PROJECTED COST" fill='#cdcdcd' barSize={25} />
-            <Line type="monotone" dataKey="ACTUAL RUN RATE" stroke="#ed0295" dot={false} />
+            <Bar 
+            dataKey='ACTUAL COST' 
+            fill='#ed0295' 
+            barSize={25} 
+            isAnimationActive={true}/>
+            <Bar 
+            dataKey="PROJECTED COST" 
+            fill='#cdcdcd' barSize={25} 
+            isAnimationActive={true}/>
+            <Line 
+            type="monotone" 
+            dataKey="ACTUAL RUN RATE" 
+            stroke="#ed0295" 
+            dot={false} 
+            isAnimationActive={true}
+            />
           </ComposedChart>
         </ResponsiveContainer>
       </div>
