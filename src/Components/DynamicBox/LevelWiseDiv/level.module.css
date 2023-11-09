@@ -86,7 +86,7 @@
   align-items: center;
   justify-content: center;
   color: #777777;
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 900;
   text-align: center;
 }
@@ -138,14 +138,14 @@
   align-items: center;
   justify-content: flex-start;
 }
-.ThirdBox{
+.ThirdBox {
   width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.ThirdBoxContent{
+.ThirdBoxContent {
   width: auto;
   height: 100%;
   display: flex;
@@ -154,12 +154,32 @@
   justify-content: center;
   text-align: center;
 }
-.ThirdBoxValue{
-  color:#ed0295ff;
+.ThirdBoxValue {
+  color: #ed0295ff;
   font-size: 1.5rem;
   font-weight: 500;
 }
-.ThirdBoxUnit{
-  color:#777777ff;
+.ThirdBoxUnit {
+  color: #777777ff;
   font-size: 1rem;
+}
+/* Level One div */
+@media screen and (max-width: 1024px) {
+  .LevelThreeDivContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+
+  }
+  .nameAndLogoThree > img {
+    width: 30px;
+    height: 30px;
+  }
+  .nameAndLogoThree{
+    font-size: 1.5rem;
+  }
+  .ThirdBox {
+    display: none;
+  }
 }
