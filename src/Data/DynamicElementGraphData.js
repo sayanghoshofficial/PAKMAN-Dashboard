@@ -107,16 +107,78 @@ const DynamicElementGraphData = [
         id: 4,
         name: 'UTILIZATION',
         icon: UtilizationIcon,
+        thirdBox: [
+            {
+                value: '',
+                unit: 'CPU'
+            },
+            {
+                value: '',
+                unit: 'I/O'
+            },
+            {
+                value: '',
+                unit: 'DISK'
+            }
+        ]
     },
     {
         id: 5,
         name: 'COMPLIANCE',
         icon: CompleanceIcon,
+        bottomContaint: {
+            value: '99.82%',
+            rightTop: 'Compliance',
+            rightDown: 'All Apps'
+        },
+        bottomExtra: {
+            value: '58',
+            anotherValue: 'Rules'
+        },
+        thirdBox: [
+            {
+                value: '98.4',
+                sign:'%',
+                unit: 'TMNG',
+            },
+            {
+                value: '98.1',
+                sign:'%',
+                unit: 'REBL'
+            },
+            {
+                value: '96.7',
+                sign:'%',
+                unit: 'SOCL'
+            }
+        ]
     },
     {
         id: 6,
         name: 'STORAGE',
         icon: StorageIcon,
+        bottomContaint: {
+            value: '4.15',
+            rightTop: '',
+            rightDown: 'PB In Use'
+        },
+        thirdBox: [
+            {
+                value: '1.25',
+                sign:'PB',
+                unit: 'EBs'
+            },
+            {
+                value: '1.50',
+                sign:'PB',
+                unit: 'S3'
+            },
+            {
+                value: '0.65',
+                sign:'PB',
+                unit: 'Other'
+            }
+        ]
     },
 
 ]

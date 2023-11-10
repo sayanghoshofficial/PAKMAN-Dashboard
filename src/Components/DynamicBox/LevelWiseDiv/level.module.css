@@ -57,7 +57,11 @@
   margin-left: 2px;
   font-size: 1rem;
   display: flex;
+  justify-content: flex-end;
   flex-direction: column;
+}
+.sign{
+  font-weight: 200;
 }
 .bottomExtra {
   width: 100%;
@@ -79,12 +83,12 @@
 }
 
 .BigValueAnother {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-right: 5px;
 }
 .unitAnother > p {
-  font-size: 1rem;
+  font-size: 0.9;
   font-weight: 500;
 }
 
@@ -119,6 +123,7 @@
 }
 
 .totalCountingTwo {
+  width: auto;
   color: #ed0295ff;
   display: flex;
   align-items: center;

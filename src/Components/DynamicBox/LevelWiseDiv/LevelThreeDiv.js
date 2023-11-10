@@ -35,6 +35,11 @@ const LevelThreeDiv = ({ data }) => {
             <div key={i} className={Style.ThirdBoxContent}>
               <div className={Style.ThirdBoxValue}>
                 {elem.value}
+                {
+                  elem.sign
+                  &&
+                  <span className={Style.sign}>{elem.sign}</span>
+                }
               </div>
               <div className={Style.ThirdBoxUnit}>
                 {elem.unit}
