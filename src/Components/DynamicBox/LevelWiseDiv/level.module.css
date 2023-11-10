@@ -52,6 +52,7 @@
 .BigValue {
   font-size: 2.5rem;
   font-weight: bolder;
+  transition: all 0.3s ease-in-out;
 }
 .unit {
   margin-left: 2px;
@@ -60,7 +61,7 @@
   justify-content: flex-end;
   flex-direction: column;
 }
-.sign{
+.sign {
   font-weight: 200;
 }
 .bottomExtra {
@@ -198,7 +199,11 @@
   align-items: center;
   color: #777777;
 }
-
+@media screen and (max-width: 1300px) {
+  .BigValue {
+    font-size: 2rem;
+  }
+}
 /* Level One div */
 @media screen and (max-width: 1024px) {
   .LevelThreeDivContainer {
