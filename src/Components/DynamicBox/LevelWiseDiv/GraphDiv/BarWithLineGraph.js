@@ -40,7 +40,7 @@ const BarWithLineGraph = ({ graphData }) => {
   };
 
   return (
-    <div className={Style.BarWithLineGraphCointainer} >
+    <div className={Style.GraphCointainer} >
       <div className={Style.graphWrapper}>
         <ResponsiveContainer width="100%" height="90%">
           <ComposedChart
@@ -72,8 +72,11 @@ const BarWithLineGraph = ({ graphData }) => {
 
               wrapperStyle={{ backgroundColor: '#292929ff' }}
               contentStyle={{ backgroundColor: 'rgba (0, 0, 0, 0.5)', border: 'none', color: '#fff' }}
-              labelStyle={{ display: 'none' }} />
-            <Legend wrapperStyle={{ fontSize: '10px', bottom: '-13px' }} />
+              labelStyle={{ display: 'none' }} 
+              />
+            <Legend 
+            wrapperStyle={{ fontSize: '10px', bottom: '-13px' }} 
+            />
             <Bar 
             dataKey='ACTUAL COST' 
             fill='#ed0295' 
@@ -89,6 +92,7 @@ const BarWithLineGraph = ({ graphData }) => {
             stroke="#ed0295" 
             dot={false} 
             isAnimationActive={true}
+            legendType='plainline'
             />
           </ComposedChart>
         </ResponsiveContainer>

@@ -1,13 +1,16 @@
 import React from 'react';
 import Style from './level.module.css';
-import { BarWithLineGraph } from './GraphDiv';
+import { BarWithLineGraph, LineGraphForInventory } from './GraphDiv';
 
 const LevelOneDiv = ({ data }) => {
   const graphSpaceSelector = (graphData) => {
     if (data.name === 'COST') {
       return <BarWithLineGraph graphData={graphData} />
-    } else {
-      return null; // You can return null or another component accordingly
+    } else if (data.name === 'INVENTORY') {
+      return <LineGraphForInventory graphData={graphData} />
+    }
+    else {
+      return null;
     }
   };
 
@@ -30,6 +33,17 @@ const LevelOneDiv = ({ data }) => {
             <p>{data.bottomContaint?.rightDown}</p>
           </div>
         </div>
+        {
+          data.bottomExtra &&
+          <div className={Style.bottomExtra}>
+            <div className={Style.BigValueAnother}>
+              <p>{data.bottomExtra.value}</p>
+            </div>
+            <div className={Style.unitAnother}>
+              <p>{data.bottomExtra.anotherValue}</p>
+            </div>
+          </div>
+        }
       </div>
     </div>
   );

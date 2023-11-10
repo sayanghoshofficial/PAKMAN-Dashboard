@@ -8,17 +8,29 @@ const LevelThreeDiv = ({ data }) => {
         <img src={data.icon} alt='icon' />
         <p>{data.name}</p>
       </div>
-      <div className={Style.totalCountingThree}>
-        <div className={Style.BigValue}>
-          <p>{data.bottomContaint?.value}</p>
+      <div className={Style.totalCountingThreeWapper}>
+        <div className={Style.totalCountingThree}>
+          <div className={Style.BigValue}>
+            <p>{data.bottomContaint?.value}</p>
+          </div>
+          <div className={Style.unit}>
+            <p>{data.bottomContaint?.rightTop}</p>
+            <p>{data.bottomContaint?.rightDown}</p>
+          </div>
         </div>
-        <div className={Style.unit}>
-          <p>{data.bottomContaint?.rightTop}</p>
-          <p>{data.bottomContaint?.rightDown}</p>
-        </div>
+        {data.bottomExtra &&
+          <div className={Style.bottomExtraForThirdLevel}>
+            <div className={Style.BigValueAnother}>
+              <p>{data.bottomExtra.value}</p>
+            </div>
+            <div className={Style.unitAnother}>
+              <p>{data.bottomExtra.anotherValue}</p>
+            </div>
+          </div>
+        }
       </div>
       <div className={Style.ThirdBox}>
-        {data.thirdBox ? ( // Check if data.thirdBox is defined
+        {data.thirdBox ? (
           data.thirdBox.map((elem, i) => (
             <div key={i} className={Style.ThirdBoxContent}>
               <div className={Style.ThirdBoxValue}>

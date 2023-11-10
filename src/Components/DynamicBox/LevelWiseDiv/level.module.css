@@ -24,7 +24,7 @@
   justify-content: center;
   color: #777777;
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: b;
   text-align: center;
 }
 .nameAndLogo > img {
@@ -43,7 +43,7 @@
 }
 .totalCounting {
   width: 100%;
-  height: 10%;
+  height: 5%;
   color: #ed0295ff;
   display: flex;
   align-items: center;
@@ -59,15 +59,42 @@
   display: flex;
   flex-direction: column;
 }
+.bottomExtra {
+  width: 100%;
+  color: #777777;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.bottomExtraForLevelTwo {
+  width: 100%;
+  height: 3%;
+  color: #777777;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-right: 1px solid #777777;
+  padding-right: 10px;
+  margin-right: 10px;
+}
 
+.BigValueAnother {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-right: 5px;
+}
+.unitAnother > p {
+  font-size: 1rem;
+  font-weight: 500;
+}
 
 /* level Two Div */
 
 .LevelTwoDivContainer {
   width: 100%;
   height: 100%;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -130,14 +157,15 @@
   justify-content: flex-start;
 }
 .ThirdBox {
-  width: 100%;
+  width: 70%;
+  text-align: center;
   height: 80px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .ThirdBoxContent {
-  width: auto;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -154,6 +182,18 @@
   color: #777777ff;
   font-size: 1rem;
 }
+.totalCountingThreeWapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bottomExtraForThirdLevel {
+  display: flex;
+  align-items: center;
+  color: #777777;
+}
+
 /* Level One div */
 @media screen and (max-width: 1024px) {
   .LevelThreeDivContainer {
@@ -161,16 +201,52 @@
     justify-content: space-between;
     padding-left: 80px;
     padding-right: 80px;
-
   }
   .nameAndLogoThree > img {
     width: 30px;
     height: 30px;
   }
-  .nameAndLogoThree{
+  .nameAndLogoThree {
     font-size: 1.5rem;
   }
   .ThirdBox {
+    display: none;
+  }
+}
+/* level two div for extra */
+@media screen and (max-width: 1700px) {
+  .bottomExtraForLevelTwo,
+  .bottomExtraForThirdLevel > .BigValueAnother > p {
+    font-size: 1rem;
+  }
+  .bottomExtraForLevelTwo,
+  .bottomExtraForThirdLevel > .unitAnother > p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 1550px) {
+  .bottomExtraForLevelTwo,
+  .bottomExtraForThirdLevel {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .bottomExtraForLevelTwo,
+  .bottomExtraForThirdLevel {
+    display: flex;
+  }
+  .totalCountingThreeWapper {
+    flex-direction: row-reverse;
+  }
+  .bottomExtraForThirdLevel {
+    border-right: 1px solid #777777;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 835px) {
+  .bottomExtraForLevelTwo,
+  .bottomExtraForThirdLevel {
     display: none;
   }
 }

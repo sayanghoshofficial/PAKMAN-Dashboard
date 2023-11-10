@@ -1,4 +1,6 @@
-.BarWithLineGraphCointainer{
+/* bar line combine graph for cost */
+
+.GraphCointainer{
     width: 100%;
     height: 100%;
     /* border: 2px solid gold; */
@@ -10,3 +12,6 @@
     width: 100%;
     height: 100%;
   }
+
+  /* line graph for inventory */
+ 
