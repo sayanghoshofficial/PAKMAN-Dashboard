@@ -1,5 +1,7 @@
 import React from 'react';
 import Style from './level.module.css';
+import ThirdBox from './ExtraElements/ThirdBox';
+import BottomExtraForThird from './ExtraElements/BottomExtraForThird';
 
 const LevelThreeDiv = ({ data }) => {
   return (
@@ -19,32 +21,13 @@ const LevelThreeDiv = ({ data }) => {
           </div>
         </div>
         {data.bottomExtra &&
-          <div className={Style.bottomExtraForThirdLevel}>
-            <div className={Style.BigValueAnother}>
-              <p>{data.bottomExtra.value}</p>
-            </div>
-            <div className={Style.unitAnother}>
-              <p>{data.bottomExtra.anotherValue}</p>
-            </div>
-          </div>
+         <BottomExtraForThird data={data}/>
         }
       </div>
       <div className={Style.ThirdBox}>
         {data.thirdBox ? (
           data.thirdBox.map((elem, i) => (
-            <div key={i} className={Style.ThirdBoxContent}>
-              <div className={Style.ThirdBoxValue}>
-                {elem.value}
-                {
-                  elem.sign
-                  &&
-                  <span className={Style.sign}>{elem.sign}</span>
-                }
-              </div>
-              <div className={Style.ThirdBoxUnit}>
-                {elem.unit}
-              </div>
-            </div>
+            <ThirdBox elem={elem} key={i} />
           ))
         ) : null}
       </div>

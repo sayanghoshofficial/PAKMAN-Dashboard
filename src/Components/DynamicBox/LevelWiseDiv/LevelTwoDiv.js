@@ -1,5 +1,6 @@
 import React from 'react';
 import Style from './level.module.css';
+import BottomExtraForTwo from './ExtraElements/BottomExtraForTwo';
 
 const LevelTwoDiv = ({ data }) => {
   return (
@@ -10,14 +11,7 @@ const LevelTwoDiv = ({ data }) => {
       </div>
       <div className={Style.totalCountingTwo}>
         {data.bottomExtra &&
-          <div className={Style.bottomExtraForLevelTwo}>
-            <div className={Style.BigValueAnother}>
-              <p>{data.bottomExtra.value}</p>
-            </div>
-            <div className={Style.unitAnother}>
-              <p>{data.bottomExtra.anotherValue}</p>
-            </div>
-          </div>
+          <BottomExtraForTwo data={data} />
         }
         <div className={Style.BigValue}>
           <p>{data.bottomContaint?.value}</p>

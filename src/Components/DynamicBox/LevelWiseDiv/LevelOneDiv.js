@@ -1,8 +1,10 @@
 import React from 'react';
 import Style from './level.module.css';
 import { BarWithLineGraph, LineGraphForInventory } from './GraphDiv';
+import { BottomExtra } from './ExtraElements';
 
 const LevelOneDiv = ({ data }) => {
+  
   const graphSpaceSelector = (graphData) => {
     if (data.name === 'COST') {
       return <BarWithLineGraph graphData={graphData} />
@@ -35,14 +37,7 @@ const LevelOneDiv = ({ data }) => {
         </div>
         {
           data.bottomExtra &&
-          <div className={Style.bottomExtra}>
-            <div className={Style.BigValueAnother}>
-              <p>{data.bottomExtra.value}</p>
-            </div>
-            <div className={Style.unitAnother}>
-              <p>{data.bottomExtra.anotherValue}</p>
-            </div>
-          </div>
+          <BottomExtra data={data}/>
         }
       </div>
     </div>
