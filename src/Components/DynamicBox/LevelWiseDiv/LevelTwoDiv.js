@@ -26,4 +26,4 @@ const LevelTwoDiv = ({ data }) => {
   )
 }
 
-export default LevelTwoDiv
+export default LevelTwoDiv;

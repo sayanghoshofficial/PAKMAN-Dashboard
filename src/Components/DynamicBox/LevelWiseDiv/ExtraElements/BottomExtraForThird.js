@@ -14,4 +14,4 @@ const BottomExtraForThird = ({data}) => {
     )
 }
 
-export default BottomExtraForThird
+export default BottomExtraForThird;
