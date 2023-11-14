@@ -1,11 +1,13 @@
 import React from 'react';
 import Style from '../level.module.css';
+import UtilizationSemiCircle from '../GraphDiv/Utilization/UtilizationSemiCircle';
 
-const ThirdBox = ({elem}) => {
+const ThirdBox = ({ elem, name }) => {
+
     return (
         <div className={Style.ThirdBoxContent}>
             <div className={Style.ThirdBoxValue}>
-                {elem.value}
+                {name === 'UTILIZATION' ? <UtilizationSemiCircle value={elem.value}/> : elem.value}
                 {
                     elem.sign
                     &&

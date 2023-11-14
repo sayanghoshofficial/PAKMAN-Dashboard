@@ -1,0 +1,39 @@
+.outerDiv {
+  width: 100%;
+  height: 100%;
+}
+
+.semiCircle {
+  width: 100px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  /* border: 1px solid red; */
+  --percentage: 0;
+  overflow: hidden;
+}
+
+.semiCircle::after {
+  content: "";
+  position: absolute;
+  top: 39%; /* Adjust to center vertically */
+  left: 22%; /* Adjust to center horizontally */
+  width: 50px;
+  height: 50px;
+  border: 3px solid;
+  border-color: #777777 #777777 #ed0295 #ed0295;
+  border-radius: 50%;
+  transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
+  animation: rotateAnimation .5s ease-in;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(calc(1deg * (-45 + 0 * 1.8)));
+  }
+  to {
+    transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
+  }
+}

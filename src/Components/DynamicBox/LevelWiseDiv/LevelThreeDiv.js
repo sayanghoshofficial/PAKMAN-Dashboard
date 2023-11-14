@@ -27,7 +27,7 @@ const LevelThreeDiv = ({ data }) => {
       <div className={Style.ThirdBox}>
         {data.thirdBox ? (
           data.thirdBox.map((elem, i) => (
-            <ThirdBox elem={elem} key={i} />
+            <ThirdBox elem={elem} key={i} name={data.name}/>
           ))
         ) : null}
       </div>

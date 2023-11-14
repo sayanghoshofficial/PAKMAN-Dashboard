@@ -33,6 +33,12 @@ const dataForMonitoring = [
     { id: 33, value: 50 }, { id: 34, value: 40 }, { id: 35, value: 30 }, { id: 36, value: 50 },
     { id: 37, value: 60 }, { id: 38, value: 65 }, { id: 39, value: 54 }, { id: 40, value: 44 },
 ]
+const dataForStorage = [
+    { id: 1, name: 'EBS', value: '30.12%', PBValue: 1.25, color: 'rgb(241,106,129)' },
+    { id: 2, name: 'S3', value: '36.14%', PBValue: 1.25, color: 'rgb(140,195,206)' },
+    { id: 3, name: 'GLACIER', value: '18.07%', PBValue: 1.25, color: 'rgb(222,176,0)' },
+    { id: 4, name: 'OTHER', value: '15.66%', PBValue: 1.25, color: 'rgb(148,161,21)' },
+]
 
 const DynamicElementGraphData = [
     {
@@ -121,21 +127,21 @@ const DynamicElementGraphData = [
         name: 'UTILIZATION',
         icon: UtilizationIcon,
         bottomContaint: {
-            value: '39%',
+            value: '39',
             rightTop: '',
             rightDown: 'Overall'
         },
         thirdBox: [
             {
-                value: '',
+                value: 12,
                 unit: 'CPU'
             },
             {
-                value: '',
+                value: 35,
                 unit: 'I/O'
             },
             {
-                value: '',
+                value: 80,
                 unit: 'DISK'
             }
         ]
@@ -175,6 +181,7 @@ const DynamicElementGraphData = [
         id: 6,
         name: 'STORAGE',
         icon: StorageIcon,
+        graphData: dataForStorage,
         bottomContaint: {
             value: '4.15',
             rightTop: '',

@@ -1,17 +1,58 @@
 /* bar line combine graph for cost */
 
-.GraphCointainer{
-    width: 100%;
-    height: 100%;
-    /* border: 2px solid gold; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.GraphCointainer {
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid gold; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .graphWrapper {
-    width: 100%;
-    height: 100%;
-  }
+  width: 100%;
+  height: 100%;
+}
 
-  /* line graph for inventory */
- 
+/* line graph for inventory */
+
+/* storage elem graph */
+.GraphForStorageWapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapperDiv {
+  height: 100%;
+  margin-bottom: 7px;
+}
+.upperHeading {
+  font-size: 1rem;
+  margin-bottom: 7px;
+}
+.bottomValueBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777777;
+  font-weight: 500;
+}
+
+.graphBox {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.upperDiv {
+  width: 100%;
+  height: 90%;
+}
+.midDiv {
+  width: 100%;
+  height: 5%;
+}
+.bottomDiv {
+  width: 100%;
+  height: 5%;
+}

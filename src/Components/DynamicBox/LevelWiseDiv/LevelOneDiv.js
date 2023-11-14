@@ -1,6 +1,6 @@
 import React from 'react';
 import Style from './level.module.css';
-import { BarWithLineGraph, LineGraphForInventory, MoniteringDataVisulition } from './GraphDiv';
+import { BarWithLineGraph, GraphForStorage, LineGraphForInventory, MoniteringDataVisulition, UtilizationSemiCircle } from './GraphDiv';
 import { BottomExtra } from './ExtraElements';
 
 const LevelOneDiv = ({ data }) => {
@@ -12,6 +12,10 @@ const LevelOneDiv = ({ data }) => {
       return <LineGraphForInventory graphData={graphData} />
     } else if (data.name === 'MONITORING') {
       return <MoniteringDataVisulition graphData={graphData} />
+    } else if (data.name === 'UTILIZATION') {
+      return <UtilizationSemiCircle/>
+    }else if(data.name === 'STORAGE'){
+      return <GraphForStorage graphData={graphData}/>
     }
     else {
       return null;

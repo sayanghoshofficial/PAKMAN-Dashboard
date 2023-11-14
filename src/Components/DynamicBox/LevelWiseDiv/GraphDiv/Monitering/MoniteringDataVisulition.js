@@ -16,7 +16,10 @@ const MoniteringDataVisulition = ({ graphData }) => {
   return (
     <div className={Style.MoniteringDataVisulitionWapper}>
       {graphData.map((ele, idx) => (
-       <BoxElem key={idx} color={colorDiv(ele.value)}/>
+        <div className={Style.BoxElemWapper}>
+          <BoxElem key={idx} color={colorDiv(ele.value)} />
+        </div>
+
       ))}
     </div>
   );
