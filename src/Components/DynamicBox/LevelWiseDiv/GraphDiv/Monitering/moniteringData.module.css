@@ -1,0 +1,48 @@
+.MoniteringDataVisulitionWapper {
+  width: 100%;
+  height: 100%;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.BoxVisulization {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.InnerOneDiv,
+.InnerTwoDiv,
+.MostInnerDiv {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .MoniteringDataVisulitionWapper {
+    padding: 0 40px;
+  }
+  .BoxVisulization {
+    width: 6vw;
+    height: 6vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .MoniteringDataVisulitionWapper {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .MoniteringDataVisulitionWapper {
+    padding: 0;
+  }
+}

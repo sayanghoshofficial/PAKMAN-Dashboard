@@ -1,15 +1,17 @@
 import React from 'react';
 import Style from './level.module.css';
-import { BarWithLineGraph, LineGraphForInventory } from './GraphDiv';
+import { BarWithLineGraph, LineGraphForInventory, MoniteringDataVisulition } from './GraphDiv';
 import { BottomExtra } from './ExtraElements';
 
 const LevelOneDiv = ({ data }) => {
-  
+
   const graphSpaceSelector = (graphData) => {
     if (data.name === 'COST') {
       return <BarWithLineGraph graphData={graphData} />
     } else if (data.name === 'INVENTORY') {
       return <LineGraphForInventory graphData={graphData} />
+    } else if (data.name === 'MONITORING') {
+      return <MoniteringDataVisulition graphData={graphData} />
     }
     else {
       return null;
@@ -37,7 +39,7 @@ const LevelOneDiv = ({ data }) => {
         </div>
         {
           data.bottomExtra &&
-          <BottomExtra data={data}/>
+          <BottomExtra data={data} />
         }
       </div>
     </div>
