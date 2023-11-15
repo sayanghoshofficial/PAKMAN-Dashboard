@@ -40,6 +40,8 @@ const dataForStorage = [
     { id: 4, name: 'OTHER', value: '15.66%', PBValue: 1.25, color: 'rgb(148,161,21)' },
 ]
 
+const dataForUtilization = []
+
 const DynamicElementGraphData = [
     {
         id: 1,

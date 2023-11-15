@@ -7,7 +7,7 @@ const ThirdBox = ({ elem, name }) => {
     return (
         <div className={Style.ThirdBoxContent}>
             <div className={Style.ThirdBoxValue}>
-                {name === 'UTILIZATION' ? <UtilizationSemiCircle value={elem.value}/> : elem.value}
+                {name === 'UTILIZATION' ? <UtilizationSemiCircle elem={elem}/> : elem.value}
                 {
                     elem.sign
                     &&

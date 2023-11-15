@@ -13,7 +13,14 @@
     --percentage: 0;
     overflow: hidden;
   }
-  
+  .semiCircle:hover{
+    .hoverElement{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+  }
   .semiCircle::after {
     content: "";
     position: absolute;
@@ -22,21 +29,11 @@
     width: 50px;
     height: 50px;
     border: 3px solid;
-    border-color: #777777 #777777 #ed0295 #ed0295;
+    border-color: #cdcdcd #cdcdcd #ed0295 #ed0295;
     border-radius: 50%;
     transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
     animation: rotateAnimation 1s ease-in-out;
   }
-  
-  @keyframes rotateAnimation {
-    from {
-      transform: rotate(calc(1deg * (-45 + 0 * 1.8)));
-    }
-    to {
-      transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
-    }
-  }
-  
   .minuteHand {
     position: absolute;
     width: 2px;
@@ -48,4 +45,42 @@
     transform: rotate(calc(1deg * (-90 + var(--percentage) * 1.8)));
     animation: rotateAnimation 1s ease-in-out;
   }
+  .hoverElement{
+    z-index: 2;
+    display: none;
+    color: #cdcdcd;
+    position:absolute;
+    top: 50%;
+    left: 30%;
+    padding: 2px;
+    height: 20px;
+    font-size: 10px;
+    background-color: hsla(0, 0%, 2%, 0.9);
+  }
+
+  /* Add ANimation */
+  @keyframes rotateAnimation {
+    from {
+      transform: rotate(calc(1deg * (-45 + 0 * 1.8)));
+    }
+    to {
+      transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
+    }
+  }
   
+  /* graph form utilization */
+
+  .GraphForUtilizationWapper{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .firstGraphBox,.secondGraphBox,.thirdGraphBox{
+    width: 100%;
+    height: 30%;
+    border: 2px solid red;
+  }
