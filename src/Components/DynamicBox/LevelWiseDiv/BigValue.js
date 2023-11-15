@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React  from 'react';
 import Style from './level.module.css';
+import useAnimatedValue from '../../../customState/useAnimatedValue';
 
 const BigValue = ({ elem }) => {
-    const [animatedValue, setAnimatedValue] = useState(0);
+    const animatedValue = useAnimatedValue(0, elem?.value || 0);
     const formatNumber = (value) => {
         if (value < 100) {
             const formattedValue = value % 1 === 0 ? value.toFixed(0) : value.toFixed(2);
@@ -16,32 +17,7 @@ const BigValue = ({ elem }) => {
         }
     }
 
-    useEffect(() => {
-        const animationDuration = 1000; // in milliseconds
-        const start = 0;
-        const end = elem?.value || 0;
-
-        const startTime = Date.now();
-
-        const updateValue = () => {
-            const currentTime = Date.now();
-            const elapsed = currentTime - startTime;
-
-            if (elapsed < animationDuration) {
-                // Calculate the animated value based on time elapsed
-                const progress = elapsed / animationDuration;
-                const nextValue = start + progress * (end - start);
-                setAnimatedValue(nextValue);
-                requestAnimationFrame(updateValue);
-            } else {
-                // Ensure the final value is set when the animation is complete
-                setAnimatedValue(end);
-            }
-        };
-
-        // Start the animation
-        updateValue();
-    }, [elem?.value]);
+   
 
     return (
         <div className={Style.BigValue}>

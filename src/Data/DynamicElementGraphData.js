@@ -67,7 +67,7 @@ const DynamicElementGraphData = [
         icon: CostIcon,
         graphData: dataForCost,
         bottomContaint: {
-            value: '24000',
+            value: 24000,
             startUnit:'$',
             endUnit:'',
             rightTop: '/Day',
@@ -93,7 +93,7 @@ const DynamicElementGraphData = [
             rightDown: 'Last 5 hours 30 minutes'
         },
         bottomExtra: {
-            value: '3,412',
+            value: 3412,
             anotherValue: 'Unique Visitors'
         },
         thirdBox: [
@@ -124,7 +124,7 @@ const DynamicElementGraphData = [
             rightDown: 'instances'
         },
         bottomExtra: {
-            value: '25.0K',
+            value: 25000,
             anotherValue: 'Unique Last 30 days'
         },
         thirdBox: [
@@ -187,7 +187,7 @@ const DynamicElementGraphData = [
             rightDown: 'All Apps'
         },
         bottomExtra: {
-            value: '58',
+            value: 58,
             anotherValue: 'Rules'
         },
         thirdBox: [
