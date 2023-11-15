@@ -1,7 +1,7 @@
 import React from 'react';
 import Style from './level.module.css';
 import BottomExtraForTwo from './ExtraElements/BottomExtraForTwo';
-import { BigValue } from './CommonFunction';
+import BigValue from './BigValue';
 
 const LevelTwoDiv = ({ data }) => {
   return (

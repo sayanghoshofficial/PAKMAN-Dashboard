@@ -2,7 +2,7 @@ import React from 'react';
 import Style from './level.module.css';
 import ThirdBox from './ExtraElements/ThirdBox';
 import BottomExtraForThird from './ExtraElements/BottomExtraForThird';
-import { BigValue } from './CommonFunction';
+import BigValue from './BigValue';
 
 const LevelThreeDiv = ({ data }) => {
   return (

@@ -8,7 +8,7 @@ import {
   MoniteringDataVisulition
 } from './GraphDiv';
 import { BottomExtra } from './ExtraElements';
-import { BigValue } from './CommonFunction';
+import BigValue from './BigValue';
 
 const LevelOneDiv = ({ data }) => {
 

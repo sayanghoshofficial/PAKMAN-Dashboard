@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import Style from './level.module.css';
 
-export function formatNumber(value) {
-    if (value < 100) {
-        const formattedValue = value % 1 === 0 ? value.toFixed(0) : value.toFixed(2);
-        return formattedValue.replace(/\.?0*$/, '');
-    } else if (value < 1000) {
-        return value.toString();
-    } else if (value < 1000000) {
-        return (value / 1000).toFixed(1) + 'K';
-    } else {
-        return (value / 1000000).toFixed(1) + 'M';
-    }
-}
-
-export const BigValue = ({ elem }) => {
+const BigValue = ({ elem }) => {
     const [animatedValue, setAnimatedValue] = useState(0);
+    const formatNumber = (value) => {
+        if (value < 100) {
+            const formattedValue = value % 1 === 0 ? value.toFixed(0) : value.toFixed(2);
+            return formattedValue.replace(/\.?0*$/, '');
+        } else if (value < 1000) {
+            return value.toString();
+        } else if (value < 1000000) {
+            return (value / 1000).toFixed(1) + 'K';
+        } else {
+            return (value / 1000000).toFixed(1) + 'M';
+        }
+    }
 
     useEffect(() => {
         const animationDuration = 1000; // in milliseconds
@@ -55,4 +54,6 @@ export const BigValue = ({ elem }) => {
             </p>
         </div>
     );
-};
+}
+
+export default BigValue
