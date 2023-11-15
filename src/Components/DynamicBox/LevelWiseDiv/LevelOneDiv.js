@@ -19,7 +19,7 @@ const LevelOneDiv = ({ data }) => {
     } else if (data.name === 'MONITORING') {
       return <MoniteringDataVisulition graphData={graphData} />
     } else if (data.name === 'UTILIZATION') {
-      return <GraphForUtilization />
+      return <GraphForUtilization graphData={graphData} />
     } else if (data.name === 'STORAGE') {
       return <GraphForStorage graphData={graphData} />
     }

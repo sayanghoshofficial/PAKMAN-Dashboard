@@ -35,12 +35,30 @@ const dataForMonitoring = [
 ]
 const dataForStorage = [
     { id: 1, name: 'EBS', value: '30.12%', PBValue: 1.25, color: 'rgb(241,106,129)' },
-    { id: 2, name: 'S3', value: '36.14%', PBValue: 1.25, color: 'rgb(140,195,206)' },
-    { id: 3, name: 'GLACIER', value: '18.07%', PBValue: 1.25, color: 'rgb(222,176,0)' },
-    { id: 4, name: 'OTHER', value: '15.66%', PBValue: 1.25, color: 'rgb(148,161,21)' },
+    { id: 2, name: 'S3', value: '36.14%', PBValue: 1.5, color: 'rgb(140,195,206)' },
+    { id: 3, name: 'GLACIER', value: '18.07%', PBValue: 0.75, color: 'rgb(222,176,0)' },
+    { id: 4, name: 'OTHER', value: '15.66%', PBValue: 0.65, color: 'rgb(148,161,21)' },
 ]
 
-const dataForUtilization = []
+const dataForUtilization = [
+    {
+        id: 1,
+        name: 'CPU',
+        read: [10, 8, 9, 11, 10, 8, 9, 10, 11, 10, 12, 11, 10, 11, 10, 9, 8, 9, 11, 10, 9, 8, 10, 11, 10]
+    },
+    {
+        id: 2,
+        name: 'I/O',
+        read: [140, 180, 129, 169, 115, 170, 140, 180, 129, 169, 115, 170, 140, 180, 129, 169, 115, 170, 140, 180, 129, 169, 115, 170, 140, 180, 129, 169],
+        write: [100, 140, 130, 145, 150, 148, 100, 140, 130, 145, 150, 148, 100, 140, 130, 145, 150, 148, 100, 140, 130, 145, 150, 148, 100, 140, 130, 145]
+    },
+    {
+        id: 3,
+        name: 'DISK',
+        input: [24, 28, 32, 25, 27, 25, 28, 32, 25, 27, 25, 24, 28, 32, 25, 27, 25, 24, 28, 32, 25, 27, 25, 24, 28, 32, 25, 27, 25, 24, 28, 32, 25, 27, 25, 24, 28, 32, 25, 25, 24, 28, 32, 25, 27, 25, 24, 28, 32,],
+        output: [53, 49, 52, 50, 48, 51, 49, 52, 50, 48, 51, 53, 49, 52, 50, 48, 51, 53, 49, 52, 50, 48, 51, 53, 49, 52, 50, 48, 51, 53, 49, 52, 50, 48, 51, 53, 49, 52, 50, 51, 53, 49, 52, 50, 48, 51, 53, 49, 52,]
+    }
+]
 
 const DynamicElementGraphData = [
     {
@@ -128,6 +146,7 @@ const DynamicElementGraphData = [
         id: 4,
         name: 'UTILIZATION',
         icon: UtilizationIcon,
+        graphData: dataForUtilization,
         bottomContaint: {
             value: '39',
             rightTop: '',
