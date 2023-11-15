@@ -75,7 +75,8 @@ const DynamicElementGraphData = [
         },
         thirdBox: [
             {
-                value: '$0.40',
+                value: 0.40,
+                startUnit:'$',
                 unit: '/Instance HR'
             }
         ]
@@ -98,15 +99,15 @@ const DynamicElementGraphData = [
         },
         thirdBox: [
             {
-                value: '30.5K',
+                value: 30500,
                 unit: 'TMNG'
             },
             {
-                value: '10.0K',
+                value: 10000,
                 unit: 'SOCL'
             },
             {
-                value: '17.4K',
+                value: 17400,
                 unit: 'REBL'
             }
         ]
@@ -129,19 +130,19 @@ const DynamicElementGraphData = [
         },
         thirdBox: [
             {
-                value: '153',
+                value: 153,
                 unit: 'LBs'
             },
             {
-                value: '57',
+                value: 57,
                 unit: 'ASG'
             },
             {
-                value: '132',
+                value: 132,
                 unit: 'S3'
             },
             {
-                value: '9000',
+                value: 9000,
                 unit: 'EBS'
             }
         ]
@@ -192,17 +193,17 @@ const DynamicElementGraphData = [
         },
         thirdBox: [
             {
-                value: '98.4',
+                value: 98.4,
                 sign: '%',
                 unit: 'TMNG',
             },
             {
-                value: '98.1',
+                value: 98.1,
                 sign: '%',
                 unit: 'REBL'
             },
             {
-                value: '96.7',
+                value: 96.7,
                 sign: '%',
                 unit: 'SOCL'
             }
@@ -222,7 +223,7 @@ const DynamicElementGraphData = [
         },
         thirdBox: [
             {
-                value: '1.25',
+                value: 1.25,
                 sign: 'PB',
                 unit: 'EBs'
             },
@@ -232,7 +233,7 @@ const DynamicElementGraphData = [
                 unit: 'S3'
             },
             {
-                value: '0.65',
+                value: 0.65,
                 sign: 'PB',
                 unit: 'Other'
             }

@@ -13,8 +13,9 @@ const useAnimatedValue = (initialValue, endValue, duration = 1000) => {
 
       if (elapsed < duration) {
         const progress = elapsed / duration;
-        const nextValue = Math.min(progress * endValue, endValue);
-        setAnimatedValue(nextValue);
+        const nextValue = initialValue + progress * (endValue - initialValue);
+        const roundedValue = parseFloat(nextValue.toFixed(2)); // Round to two decimal places
+        setAnimatedValue(roundedValue);
         requestAnimationFrame(updateValue);
       } else {
         setAnimatedValue(endValue);
