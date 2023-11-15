@@ -67,7 +67,9 @@ const DynamicElementGraphData = [
         icon: CostIcon,
         graphData: dataForCost,
         bottomContaint: {
-            value: '$24.0K',
+            value: '24000',
+            startUnit:'$',
+            endUnit:'',
             rightTop: '/Day',
             rightDown: 'Run Rate'
         },
@@ -84,7 +86,9 @@ const DynamicElementGraphData = [
         graphData: dataForMonitoring,
         icon: MoniteringIcon,
         bottomContaint: {
-            value: '3.4M',
+            value: 3400000,
+            startUnit:'',
+            endUnit:'',
             rightTop: 'Requests',
             rightDown: 'Last 5 hours 30 minutes'
         },
@@ -113,7 +117,9 @@ const DynamicElementGraphData = [
         icon: InventoryIcon,
         graphData: dataForInventory,
         bottomContaint: {
-            value: '$6.5K',
+            value: 6500,
+            startUnit:'$',
+            endUnit:'',
             rightTop: 'current',
             rightDown: 'instances'
         },
@@ -148,7 +154,9 @@ const DynamicElementGraphData = [
         icon: UtilizationIcon,
         graphData: dataForUtilization,
         bottomContaint: {
-            value: '39',
+            value: 39,
+            startUnit:'',
+            endUnit:'%',
             rightTop: '',
             rightDown: 'Overall'
         },
@@ -172,7 +180,9 @@ const DynamicElementGraphData = [
         name: 'COMPLIANCE',
         icon: CompleanceIcon,
         bottomContaint: {
-            value: '99.82%',
+            value: 99.82,
+            startUnit:'',
+            endUnit:'%',
             rightTop: 'Compliance',
             rightDown: 'All Apps'
         },
@@ -204,7 +214,9 @@ const DynamicElementGraphData = [
         icon: StorageIcon,
         graphData: dataForStorage,
         bottomContaint: {
-            value: '4.15',
+            value: 4.15,
+            startUnit:'',
+            endUnit:'',
             rightTop: '',
             rightDown: 'PB In Use'
         },

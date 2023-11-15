@@ -1,6 +1,7 @@
 import React from 'react';
 import Style from './level.module.css';
 import BottomExtraForTwo from './ExtraElements/BottomExtraForTwo';
+import { BigValue } from './CommonFunction';
 
 const LevelTwoDiv = ({ data }) => {
   return (
@@ -13,9 +14,7 @@ const LevelTwoDiv = ({ data }) => {
         {data.bottomExtra &&
           <BottomExtraForTwo data={data} />
         }
-        <div className={Style.BigValue}>
-          <p>{data.bottomContaint?.value}</p>
-        </div>
+        <BigValue elem={data.bottomContaint} />
 
         <div className={Style.unit}>
           <p>{data.bottomContaint?.rightTop}</p>

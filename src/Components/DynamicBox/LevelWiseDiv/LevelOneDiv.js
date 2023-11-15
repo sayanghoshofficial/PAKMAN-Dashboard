@@ -8,6 +8,7 @@ import {
   MoniteringDataVisulition
 } from './GraphDiv';
 import { BottomExtra } from './ExtraElements';
+import { BigValue } from './CommonFunction';
 
 const LevelOneDiv = ({ data }) => {
 
@@ -39,9 +40,7 @@ const LevelOneDiv = ({ data }) => {
           {graphSpaceSelector(data.graphData)}
         </div>
         <div className={Style.totalCounting}>
-          <div className={Style.BigValue}>
-            <p>{data.bottomContaint?.value}</p>
-          </div>
+          <BigValue elem={data.bottomContaint} />
           <div className={Style.unit}>
             <p>{data.bottomContaint?.rightTop}</p>
             <p>{data.bottomContaint?.rightDown}</p>

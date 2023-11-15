@@ -2,6 +2,7 @@ import React from 'react';
 import Style from './level.module.css';
 import ThirdBox from './ExtraElements/ThirdBox';
 import BottomExtraForThird from './ExtraElements/BottomExtraForThird';
+import { BigValue } from './CommonFunction';
 
 const LevelThreeDiv = ({ data }) => {
   return (
@@ -12,22 +13,20 @@ const LevelThreeDiv = ({ data }) => {
       </div>
       <div className={Style.totalCountingThreeWapper}>
         <div className={Style.totalCountingThree}>
-          <div className={Style.BigValue}>
-            <p>{data.bottomContaint?.value}</p>
-          </div>
+        <BigValue elem={data.bottomContaint} />
           <div className={Style.unit}>
             <p>{data.bottomContaint?.rightTop}</p>
             <p>{data.bottomContaint?.rightDown}</p>
           </div>
         </div>
         {data.bottomExtra &&
-         <BottomExtraForThird data={data}/>
+          <BottomExtraForThird data={data} />
         }
       </div>
       <div className={Style.ThirdBox}>
         {data.thirdBox ? (
           data.thirdBox.map((elem, i) => (
-            <ThirdBox elem={elem} key={i} name={data.name}/>
+            <ThirdBox elem={elem} key={i} name={data.name} />
           ))
         ) : null}
       </div>
