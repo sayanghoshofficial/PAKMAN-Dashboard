@@ -29,6 +29,7 @@ const useAnimatedValue = (initialValue, endValue, duration = 1000) => {
         const roundedValue = countDecimalPlaces(endValue) === 3
           ? parseFloat(nextValue.toFixed(4)) // Round to four decimal places
           : parseFloat(nextValue.toFixed(2)); // Round to two decimal places
+          
         setAnimatedValue(roundedValue);
         requestAnimationFrame(updateValue);
       } else {

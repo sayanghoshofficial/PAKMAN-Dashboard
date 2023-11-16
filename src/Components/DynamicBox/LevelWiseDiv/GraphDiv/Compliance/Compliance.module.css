@@ -61,6 +61,7 @@
 .element > p {
   font-size: 60%;
   color: rgb(0, 0, 0);
+  animation: changeFontSize 1s ease-in-out;
 }
 div p:first-child {
   margin-right: 10px;
@@ -82,6 +83,7 @@ div p:first-child {
 }
 .Mainelement>p{
   font-size: 60%;
+  animation: changeFontSize 1s ease-in-out;
 }
 .graphVisual {
   position: relative;
@@ -118,6 +120,15 @@ div p:first-child {
     var(--shadeColor2);
   border-radius: 50%;
   transform: rotate(calc(1deg * (var(--rotation) - var(--percentage) * 1.8)));
+}
+
+@keyframes changeFontSize {
+  from {
+    font-size: 100%;
+  }
+  to {
+    font-size: 60%;
+  }
 }
 
 @media screen and (max-width: 1800px) {
@@ -174,6 +185,7 @@ div p:first-child {
   }
   .elementDetails {
     height: 29vw;
+    margin-left: 20%;
   }
   .element {
     height: 15px;

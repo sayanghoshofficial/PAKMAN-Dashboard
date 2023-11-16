@@ -4,6 +4,8 @@ import ComplianceInner from './ComplianceInner';
 
 const ComplianceBottomDivForLevelOne = ({ data }) => {
     const dataValue = data.complianceL1Bottom;
+    
+
     return (
         <div className={Style.ComplianceBottomDivForLevelOneWapper}>
             {
