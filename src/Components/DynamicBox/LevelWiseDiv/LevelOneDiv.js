@@ -6,7 +6,8 @@ import {
   GraphForUtilization,
   LineGraphForInventory,
   MoniteringDataVisulition,
-  ComplianceBottomDivForLevelOne
+  ComplianceBottomDivForLevelOne,
+  ComplianceGraphBox
 } from './GraphDiv';
 import { BottomExtra, TotalCounting } from './ExtraElements';
 
@@ -23,6 +24,8 @@ const LevelOneDiv = ({ data }) => {
       return <GraphForUtilization graphData={graphData} />
     } else if (data.name === 'STORAGE') {
       return <GraphForStorage graphData={graphData} />
+    } else if (data.name === 'COMPLIANCE') {
+      return <ComplianceGraphBox graphData={graphData} others={data.bottomContaint}/>
     }
     else {
       return null;

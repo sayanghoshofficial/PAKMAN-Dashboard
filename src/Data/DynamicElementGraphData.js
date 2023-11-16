@@ -34,10 +34,10 @@ const dataForMonitoring = [
     { id: 37, value: 60 }, { id: 38, value: 65 }, { id: 39, value: 54 }, { id: 40, value: 44 },
 ]
 const dataForStorage = [
-    { id: 1, name: 'EBS', value: '30.12%', PBValue: 1.25, color: 'rgb(241,106,129)' },
-    { id: 2, name: 'S3', value: '36.14%', PBValue: 1.5, color: 'rgb(140,195,206)' },
-    { id: 3, name: 'GLACIER', value: '18.07%', PBValue: 0.75, color: 'rgb(222,176,0)' },
-    { id: 4, name: 'OTHER', value: '15.66%', PBValue: 0.65, color: 'rgb(148,161,21)' },
+    { id: 1, name: 'EBS', value: '30.12%', PBvalue: 1.25, color: 'rgb(241,106,129)' },
+    { id: 2, name: 'S3', value: '36.14%', PBvalue: 1.5, color: 'rgb(140,195,206)' },
+    { id: 3, name: 'GLACIER', value: '18.07%', PBvalue: 0.75, color: 'rgb(222,176,0)' },
+    { id: 4, name: 'OTHER', value: '15.66%', PBvalue: 0.65, color: 'rgb(148,161,21)' },
 ]
 
 const dataForUtilization = [
@@ -60,6 +60,15 @@ const dataForUtilization = [
     }
 ]
 
+const graphDataForCompliance = [
+    { id: 1, name: 'CLOUD OP', value: 25, color1: '#f9f9f9', color2: '#870041', rotation: 405 },
+    { id: 2, name: 'SOX',value: 60, color1: '#eeeeee', color2: '#ab0056', rotation: 405 },
+    { id: 3, name: 'PATCHING',value: 75, color1: '#f9f9f9', color2: '#ef228a', rotation: 475 },
+    { id: 4, name: 'CERTIFICATES',value: 65, color1: '#eeeeee', color2: '#ff0087', rotation: 488 },
+    { id: 5, name: 'TAGGING',value: 50, color1: '#f9f9f9', color2: '#ff008c', rotation: 467 },
+    { id: 6, name: 'SECURITY',value: 28, color1: '#eeeeee', color2: '#ff0087', rotation: 457 },
+]
+
 const DynamicElementGraphData = [
     {
         id: 1,
@@ -68,15 +77,15 @@ const DynamicElementGraphData = [
         graphData: dataForCost,
         bottomContaint: {
             value: 24000,
-            startUnit:'$',
-            endUnit:'',
+            startUnit: '$',
+            endUnit: '',
             rightTop: '/Day',
             rightDown: 'Run Rate'
         },
         thirdBox: [
             {
                 value: 0.40,
-                startUnit:'$',
+                startUnit: '$',
                 unit: '/Instance HR'
             }
         ]
@@ -88,14 +97,14 @@ const DynamicElementGraphData = [
         icon: MoniteringIcon,
         bottomContaint: {
             value: 3400000,
-            startUnit:'',
-            endUnit:'',
+            startUnit: '',
+            endUnit: '',
             rightTop: 'Requests',
             rightDown: 'Last 5 hours 30 minutes'
         },
         bottomExtra: {
             value: 3412,
-            anotherValue: 'Unique Visitors'
+            anothervalue: 'Unique Visitors'
         },
         thirdBox: [
             {
@@ -119,14 +128,14 @@ const DynamicElementGraphData = [
         graphData: dataForInventory,
         bottomContaint: {
             value: 6500,
-            startUnit:'$',
-            endUnit:'',
+            startUnit: '$',
+            endUnit: '',
             rightTop: 'current',
             rightDown: 'instances'
         },
         bottomExtra: {
             value: 25000,
-            anotherValue: 'Unique Last 30 days'
+            anothervalue: 'Unique Last 30 days'
         },
         thirdBox: [
             {
@@ -156,8 +165,8 @@ const DynamicElementGraphData = [
         graphData: dataForUtilization,
         bottomContaint: {
             value: 39,
-            startUnit:'',
-            endUnit:'%',
+            startUnit: '',
+            endUnit: '%',
             rightTop: '',
             rightDown: 'Overall'
         },
@@ -180,16 +189,17 @@ const DynamicElementGraphData = [
         id: 5,
         name: 'COMPLIANCE',
         icon: CompleanceIcon,
+        graphData: graphDataForCompliance,
         bottomContaint: {
             value: 99.82,
-            startUnit:'',
-            endUnit:'%',
+            startUnit: '',
+            endUnit: '%',
             rightTop: 'Compliance',
             rightDown: 'All Apps'
         },
         bottomExtra: {
             value: 58,
-            anotherValue: 'Rules'
+            anothervalue: 'Rules'
         },
         thirdBox: [
             {
@@ -207,6 +217,24 @@ const DynamicElementGraphData = [
                 sign: '%',
                 unit: 'SOCL'
             }
+        ],
+        complianceL1Bottom: [
+            {
+                id: 1,
+                value: 200000,
+                purpose: 'Scanned'
+            },
+            {
+                id: 2,
+                value: 25,
+                purpose: 'Issues Found'
+            },
+            {
+                id: 3,
+                value: 0.001,
+                percentSign: '%',
+                purpose: 'Items with issues'
+            }
         ]
     },
     {
@@ -216,8 +244,8 @@ const DynamicElementGraphData = [
         graphData: dataForStorage,
         bottomContaint: {
             value: 4.15,
-            startUnit:'',
-            endUnit:'',
+            startUnit: '',
+            endUnit: '',
             rightTop: '',
             rightDown: 'PB In Use'
         },
