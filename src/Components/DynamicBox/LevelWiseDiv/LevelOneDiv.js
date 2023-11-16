@@ -5,10 +5,10 @@ import {
   GraphForStorage,
   GraphForUtilization,
   LineGraphForInventory,
-  MoniteringDataVisulition
+  MoniteringDataVisulition,
+  ComplianceBottomDivForLevelOne
 } from './GraphDiv';
-import { BottomExtra } from './ExtraElements';
-import BigValue from './BigValue';
+import { BottomExtra, TotalCounting } from './ExtraElements';
 
 const LevelOneDiv = ({ data }) => {
 
@@ -39,13 +39,12 @@ const LevelOneDiv = ({ data }) => {
         <div className={Style.GraphSpace}>
           {graphSpaceSelector(data.graphData)}
         </div>
-        <div className={Style.totalCounting}>
-          <BigValue elem={data.bottomContaint} />
-          <div className={Style.unit}>
-            <p>{data.bottomContaint?.rightTop}</p>
-            <p>{data.bottomContaint?.rightDown}</p>
-          </div>
-        </div>
+        {data.name === 'COMPLIANCE' ?
+          <ComplianceBottomDivForLevelOne data={data} />
+          :
+          <TotalCounting data={data} />
+        }
+
         {
           data.bottomExtra &&
           <BottomExtra data={data} />

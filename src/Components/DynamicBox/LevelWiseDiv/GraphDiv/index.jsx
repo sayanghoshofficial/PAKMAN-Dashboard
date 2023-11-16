@@ -4,6 +4,7 @@ import MoniteringDataVisulition from "./Monitering/MoniteringDataVisulition";
 import UtilizationSemiCircle from "./Utilization/UtilizationSemiCircle";
 import GraphForUtilization from "./Utilization/GraphForUtilization";
 import GraphForStorage from "./GraphForStorage";
+import { ComplianceBottomDivForLevelOne } from "./Compliance";
 
 
 export {
@@ -12,5 +13,6 @@ export {
     MoniteringDataVisulition,
     UtilizationSemiCircle,
     GraphForStorage,
-    GraphForUtilization
+    GraphForUtilization,
+    ComplianceBottomDivForLevelOne,
 }

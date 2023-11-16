@@ -10,7 +10,10 @@ const BottomExtra = ({ data }) => {
     const animatedValue = useAnimatedValue(0, data.bottomExtra?.value || 0);
 
     return (
-        <div className={Style.bottomExtra}>
+        <div
+            className={Style.bottomExtra}
+            style={{ display: data.name === 'COMPLIANCE' ? 'none' : null }}
+        >
             <div className={Style.BigValueAnother}>
                 <p>{formatNumber(animatedValue)}</p>
             </div>
