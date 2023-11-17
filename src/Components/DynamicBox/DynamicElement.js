@@ -4,7 +4,7 @@ import InnerHeader from './InnerHeader/InnerHeader';
 import { DynamicElementClassData, DynamicElementGraphData } from '../../Data';
 import { LevelOneDiv, LevelTwoDiv, LevelThreeDiv } from './LevelWiseDiv';
 
-const DynamicElement = () => {
+const DynamicElement = ({ toggleDropDown, appValue, resetAppValue }) => {
     const [classes, setClasses] = useState(DynamicElementClassData[0]);
 
     const handleClick = (index) => {
@@ -31,7 +31,7 @@ const DynamicElement = () => {
 
     return (
         <div className={Style.DynamicElementContainer}>
-            <InnerHeader />
+            <InnerHeader toggleDropDown={toggleDropDown} appValue={appValue} resetAppValue={resetAppValue} />
             <div className={Style.DynamicElementWrapper}>
                 {DynamicElementGraphData.map((data, i) => (
                     <div

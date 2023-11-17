@@ -13,7 +13,7 @@
   justify-content: space-between;
 }
 .fillterApplication {
-  width: 200px;
+  width: 20%;
   height: 100%;
   /* border: 2px solid red; */
   font-size: 1rem;
@@ -21,10 +21,15 @@
   vertical-align: middle;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+.fillterApplication > p {
+  font-weight: 700;
+  margin-left: 10px;
 }
 .fillterApplication > img {
   width: 22px;
+  cursor: pointer;
 }
 .ApplicationSecurity {
   width: 50%;
@@ -82,11 +87,14 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .ApplicationStatusInnerDiv{
+  .ApplicationStatusInnerDiv {
     display: none;
   }
   .Security {
     height: 46px;
+  }
+  .fillterApplication{
+    width: 40%;
   }
   .fillterApplication > img {
     width: 16px;

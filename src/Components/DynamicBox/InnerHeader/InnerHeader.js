@@ -1,13 +1,31 @@
 import React from 'react';
 import Style from './innerHeader.module.css';
 import fillterIcon from '../../../Assets/IconImage/filter-filled-tool-symbol.png';
+import chevronRightIcon from '../../../Assets/IconImage/right-chevron.png';
 
-const InnerHeader = () => {
+const InnerHeader = ({ toggleDropDown, appValue, resetAppValue }) => {
+
+
   return (
     <div className={Style.InnerHeader}>
       <div className={Style.fillterApplication}>
-        <img src={fillterIcon} alt='filter_icon' />
-        <p>ALL APPLICATIONS</p>
+        <img src={fillterIcon} alt='filter_icon' onClick={toggleDropDown} />
+        <p
+          onClick={() => (appValue.length > 0 ? resetAppValue() : null)}
+          style={appValue.length > 0 ? { cursor: 'pointer', color: '#ed0295' } : null}
+        >
+          ALL APPLICATIONS
+        </p>
+        {
+          appValue.length > 0
+          &&
+          <>
+            <img src={chevronRightIcon} alt='chevron-right'/>
+            <p>{appValue}</p>
+          </>
+
+        }
+
       </div>
       <div className={Style.ApplicationSecurity}>
         <div className={Style.ApplicationStatus}>
@@ -23,7 +41,7 @@ const InnerHeader = () => {
           <div className={Style.greenDot}></div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
