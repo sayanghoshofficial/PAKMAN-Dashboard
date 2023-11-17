@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Create React PACKMAN Dashbord App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the Hosting Page [PACKMAN Dashboard](https://sayanghoshofficial.github.io/PAKMAN-Dashboard)
 
-## Available Scripts
+## Cost
 
-In the project directory, you can run:
+![Cost](https://github.com/sayanghoshofficial/PAKMAN-Dashboard/assets/99132893/a45c1998-e89e-4077-952b-68dd321be257)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Monitoring
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Monitoring](https://github.com/sayanghoshofficial/PAKMAN-Dashboard/assets/99132893/a42927dd-d0be-47e7-8a91-bcef7e783711)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Inventory
 
-### `npm run build`
+![Inventory](https://github.com/sayanghoshofficial/PAKMAN-Dashboard/assets/99132893/2b6de83d-d0c8-451e-af91-33ae0524e358)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Utilization
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Utilization](https://github.com/sayanghoshofficial/PAKMAN-Dashboard/assets/99132893/7bbaf408-5be9-4974-95eb-ba25172b8900)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Compliance
 
-### `npm run eject`
+![Compliance](https://github.com/sayanghoshofficial/PAKMAN-Dashboard/assets/99132893/7b0f68c0-41e0-482f-a771-0252f0c72c16)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Storage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Storage](https://github.com/sayanghoshofficial/PAKMAN-Dashboard/assets/99132893/e8c3d025-33cb-4302-b4c9-32dc5341f061)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Dropdown
 
-## Learn More
+![Dropdown](https://github.com/sayanghoshofficial/PAKMAN-Dashboard/assets/99132893/a4771a4c-06ef-4fe2-8e58-ba598f855685)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
