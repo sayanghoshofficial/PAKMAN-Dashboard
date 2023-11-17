@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/PAKMAN-Dashboard/static/css/main.65c6db1d.css",
+    "main.js": "/PAKMAN-Dashboard/static/js/main.0c5b0861.js",
+    "static/media/pacman_bg.jpg": "/PAKMAN-Dashboard/static/media/pacman_bg.26e3dad7d87fb7b904fd.jpg",
+    "static/media/dollar.png": "/PAKMAN-Dashboard/static/media/dollar.ba5e5c82039187a7ad53.png",
+    "static/media/monitoring.png": "/PAKMAN-Dashboard/static/media/monitoring.38b2ab942d60bcf77ef9.png",
+    "static/media/database.png": "/PAKMAN-Dashboard/static/media/database.a7cd2ff2428cefb8f028.png",
+    "static/media/connection.png": "/PAKMAN-Dashboard/static/media/connection.4b7f48f566ddde6d6a6a.png",
+    "static/media/pie-chart.png": "/PAKMAN-Dashboard/static/media/pie-chart.8bcb126c2a0146c5a380.png",
+    "static/media/profile-user.png": "/PAKMAN-Dashboard/static/media/profile-user.c915bcabfc0398d9f567.png",
+    "static/media/filter-filled-tool-symbol.png": "/PAKMAN-Dashboard/static/media/filter-filled-tool-symbol.1861549bf251a253cd65.png",
+    "static/media/correct.png": "/PAKMAN-Dashboard/static/media/correct.61a5651e8965dac96d33.png",
+    "static/media/alarm-bell.png": "/PAKMAN-Dashboard/static/media/alarm-bell.cfdc685fbeffa7536bba.png",
+    "static/media/magnifying-glass.png": "/PAKMAN-Dashboard/static/media/magnifying-glass.18fcaeafedd72e3c77d4.png",
+    "static/media/add.png": "/PAKMAN-Dashboard/static/media/add.b8fa88ad11a044a5c37e.png",
+    "static/media/minus.png": "/PAKMAN-Dashboard/static/media/minus.7fa3e5561528ffc23cb1.png",
+    "static/media/logo_pacman.svg": "/PAKMAN-Dashboard/static/media/logo_pacman.689d59632e907ba19874afc42310f834.svg",
+    "index.html": "/PAKMAN-Dashboard/index.html",
+    "static/media/menu.svg": "/PAKMAN-Dashboard/static/media/menu.a06dab493864f86c675e32cc85d2e191.svg",
+    "main.65c6db1d.css.map": "/PAKMAN-Dashboard/static/css/main.65c6db1d.css.map",
+    "main.0c5b0861.js.map": "/PAKMAN-Dashboard/static/js/main.0c5b0861.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65c6db1d.css",
+    "static/js/main.0c5b0861.js"
+  ]
+}
