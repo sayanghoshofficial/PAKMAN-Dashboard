@@ -56,15 +56,15 @@ const ComplianceGraphUsingD3 = ({ data, others }) => {
 
             // Add text at the bottom of the arc
             svg.append('text')
-                .attr('x', centerX - 80)
+                .attr('x', centerX - 30)
                 .attr('y', centerY + radius + 5)
-                .attr('text-anchor', 'middle')
+                .attr('text-anchor', 'end')
                 .attr('fill', '#000')
                 .attr('font-weight', '400')
                 .attr('font-size', '1rem') // start animation
                 .transition() // Add transition
                 .duration(1000) // Set the duration of the transition in milliseconds
-                .attr('font-size', '0.5rem') // End with 0.5rem
+                .attr('font-size', '0.6rem') // End with 0.5rem
                 .text(`${data[index].name} ${data[index].percentage}%`);
         };
 
@@ -75,20 +75,22 @@ const ComplianceGraphUsingD3 = ({ data, others }) => {
 
         // Add text for "all Apps 99.82%"
         svg.append('text')
-            .attr('x', centerX - 100)
-            .attr('y', centerY + (centerY * 0.03))  // Adjust the vertical position as needed
-            .attr('text-anchor', 'middle')
+            .attr('x', centerX - 80)
+            .attr('y', centerY + (centerY * 0.02))  // Adjust the vertical position as needed
+            .attr('text-anchor', 'end')
             .attr('fill', '#ed0295')
             .attr('font-weight', '400')
-            .attr('font-size', '1rem')
-            .attr('font-size', '0.5rem')
+            .attr('font-size', '1rem') // start animation
+            .transition() // Add transition
+            .duration(1000) // Set the duration of the transition in milliseconds
+            .attr('font-size', '0.6rem')
             .text('all Apps');
 
         // Add text for "all Apps 99.82%"
         svg.append('text')
-            .attr('x', centerX - 30)
+            .attr('x', centerX + 30)
             .attr('y', centerY + (centerY * 0.04))  // Adjust the vertical position as needed
-            .attr('text-anchor', 'middle')
+            .attr('text-anchor', 'end')
             .attr('fill', '#ed0295')
             .attr('font-weight', '900')
             .attr('font-size', '1rem') // start animation
