@@ -61,7 +61,10 @@ const ComplianceGraphUsingD3 = ({ data, others }) => {
                 .attr('text-anchor', 'middle')
                 .attr('fill', '#000')
                 .attr('font-weight', '400')
-                .attr('font-size', '0.5rem')
+                .attr('font-size', '1rem') // start animation
+                .transition() // Add transition
+                .duration(1000) // Set the duration of the transition in milliseconds
+                .attr('font-size', '0.5rem') // End with 0.5rem
                 .text(`${data[index].name} ${data[index].percentage}%`);
         };
 
@@ -77,6 +80,7 @@ const ComplianceGraphUsingD3 = ({ data, others }) => {
             .attr('text-anchor', 'middle')
             .attr('fill', '#ed0295')
             .attr('font-weight', '400')
+            .attr('font-size', '1rem')
             .attr('font-size', '0.5rem')
             .text('all Apps');
 
@@ -87,6 +91,9 @@ const ComplianceGraphUsingD3 = ({ data, others }) => {
             .attr('text-anchor', 'middle')
             .attr('fill', '#ed0295')
             .attr('font-weight', '900')
+            .attr('font-size', '1rem') // start animation
+            .transition() // Add transition
+            .duration(1000) // Set the duration of the transition in milliseconds
             .attr('font-size', '1.5rem')
             .text(`${others.value} ${others.endUnit}`);
 
