@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PAKMAN-Dashboard/static/css/main.196fac1b.css",
-    "main.js": "/PAKMAN-Dashboard/static/js/main.b396758f.js",
+    "main.js": "/PAKMAN-Dashboard/static/js/main.20268dc9.js",
     "static/media/pacman_bg.jpg": "/PAKMAN-Dashboard/static/media/pacman_bg.26e3dad7d87fb7b904fd.jpg",
     "static/media/dollar.png": "/PAKMAN-Dashboard/static/media/dollar.ba5e5c82039187a7ad53.png",
     "static/media/monitoring.png": "/PAKMAN-Dashboard/static/media/monitoring.38b2ab942d60bcf77ef9.png",
@@ -19,10 +19,10 @@
     "index.html": "/PAKMAN-Dashboard/index.html",
     "static/media/menu.svg": "/PAKMAN-Dashboard/static/media/menu.a06dab493864f86c675e32cc85d2e191.svg",
     "main.196fac1b.css.map": "/PAKMAN-Dashboard/static/css/main.196fac1b.css.map",
-    "main.b396758f.js.map": "/PAKMAN-Dashboard/static/js/main.b396758f.js.map"
+    "main.20268dc9.js.map": "/PAKMAN-Dashboard/static/js/main.20268dc9.js.map"
   },
   "entrypoints": [
     "static/css/main.196fac1b.css",
-    "static/js/main.b396758f.js"
+    "static/js/main.20268dc9.js"
   ]
 }
