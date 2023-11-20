@@ -60,14 +60,60 @@ const dataForUtilization = [
     }
 ]
 
-const graphDataForCompliance = [
-    { id: 1, name: 'CLOUD OP', value: 25, color1: '#f9f9f9', color2: '#870041', rotation: 405 },
-    { id: 2, name: 'SOX',value: 60, color1: '#eeeeee', color2: '#ab0056', rotation: 405 },
-    { id: 3, name: 'PATCHING',value: 75, color1: '#f9f9f9', color2: '#ef228a', rotation: 475 },
-    { id: 4, name: 'CERTIFICATES',value: 65, color1: '#eeeeee', color2: '#ff0087', rotation: 488 },
-    { id: 5, name: 'TAGGING',value: 50, color1: '#f9f9f9', color2: '#ff008c', rotation: 467 },
-    { id: 6, name: 'SECURITY',value: 28, color1: '#eeeeee', color2: '#ff0087', rotation: 457 },
+// const graphDataForCompliance = [
+//     { id: 1, name: 'CLOUD OP', value: 25, color1: '#f9f9f9', color2: '#870041', rotation: 405 },
+//     { id: 2, name: 'SOX',value: 60, color1: '#eeeeee', color2: '#ab0056', rotation: 405 },
+//     { id: 3, name: 'PATCHING',value: 75, color1: '#f9f9f9', color2: '#ef228a', rotation: 475 },
+//     { id: 4, name: 'CERTIFICATES',value: 65, color1: '#eeeeee', color2: '#ff0087', rotation: 488 },
+//     { id: 5, name: 'TAGGING',value: 50, color1: '#f9f9f9', color2: '#ff008c', rotation: 467 },
+//     { id: 6, name: 'SECURITY',value: 28, color1: '#eeeeee', color2: '#ff0087', rotation: 457 },
+// ]
+
+const ComplianceGraphData = [
+    {
+        id: 1,
+        name: 'TAGGING',
+        percentage: 25,
+        mainRadiusColor: '#f9f9f9',
+        progressRadiusColor: '#870041',
+    },
+    {
+        id: 2,
+        name: 'SOX',
+        percentage: 60,
+        mainRadiusColor: '#eeeeee',
+        progressRadiusColor: '#ab0056',
+    },
+    {
+        id: 3,
+        name: 'PATCHING',
+        percentage: 75,
+        mainRadiusColor: '#f9f9f9',
+        progressRadiusColor: '#ff0087',
+    },
+    {
+        id: 4,
+        name: 'CERTIFICATES',
+        percentage: 65,
+        mainRadiusColor: '#eeeeee',
+        progressRadiusColor: '#ff0087',
+    },
+    {
+        id: 5,
+        name: 'TAGGING',
+        percentage: 50,
+        mainRadiusColor: '#f9f9f9',
+        progressRadiusColor: '#ff008c',
+    },
+    {
+        id: 6,
+        name: 'SECURITY',
+        percentage: 28,
+        mainRadiusColor: '#eeeeee',
+        progressRadiusColor: '#ff0087',
+    },
 ]
+
 
 const DynamicElementGraphData = [
     {
@@ -189,7 +235,7 @@ const DynamicElementGraphData = [
         id: 5,
         name: 'COMPLIANCE',
         icon: CompleanceIcon,
-        graphData: graphDataForCompliance,
+        graphData: ComplianceGraphData,
         bottomContaint: {
             value: 99.82,
             startUnit: '',
