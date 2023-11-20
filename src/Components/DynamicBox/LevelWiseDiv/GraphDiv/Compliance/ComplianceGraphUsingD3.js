@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Style from './Compliance.module.css';
 import * as d3 from 'd3';
 
-const ComplianceGraphUsingD3 = ({ data }) => {
+const ComplianceGraphUsingD3 = ({ data,others }) => {
     const svgRef = useRef(null);
 
     useEffect(() => {
@@ -88,7 +88,7 @@ const ComplianceGraphUsingD3 = ({ data }) => {
             .attr('fill', '#ed0295')
             .attr('font-weight', '900')
             .attr('font-size', '1.5rem')
-            .text('99.82%');
+            .text(`${others.value} ${others.endUnit}`);
 
         svg.style('background-color', 'transparent');
     }, [data]);
