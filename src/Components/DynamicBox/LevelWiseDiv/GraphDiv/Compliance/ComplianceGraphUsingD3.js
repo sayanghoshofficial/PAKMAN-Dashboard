@@ -75,7 +75,7 @@ const ComplianceGraphUsingD3 = ({ data, others }) => {
 
         // Add text for "all Apps 99.82%"
         svg.append('text')
-            .attr('x', centerX - 80)
+            .attr('x', centerX - 90)
             .attr('y', centerY + (centerY * 0.02))  // Adjust the vertical position as needed
             .attr('text-anchor', 'end')
             .attr('fill', '#ed0295')
@@ -88,7 +88,7 @@ const ComplianceGraphUsingD3 = ({ data, others }) => {
 
         // Add text for "all Apps 99.82%"
         svg.append('text')
-            .attr('x', centerX + 20)
+            .attr('x', centerX + 10)
             .attr('y', centerY + (centerY * 0.04))  // Adjust the vertical position as needed
             .attr('text-anchor', 'end')
             .attr('fill', '#ed0295')
