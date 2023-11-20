@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Style from './Compliance.module.css';
 import * as d3 from 'd3';
 
-const ComplianceGraphUsingD3 = ({ data,others }) => {
+const ComplianceGraphUsingD3 = ({ data, others }) => {
     const svgRef = useRef(null);
 
     useEffect(() => {
@@ -91,7 +91,7 @@ const ComplianceGraphUsingD3 = ({ data,others }) => {
             .text(`${others.value} ${others.endUnit}`);
 
         svg.style('background-color', 'transparent');
-    }, [data]);
+    }, [data, others]);
 
     return (
         <div className={Style.ComplianceGraphWapper}>

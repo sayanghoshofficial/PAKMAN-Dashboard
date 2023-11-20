@@ -1,7 +1,5 @@
-// ComplianceGraphBox.js
 import React, { useEffect, useState } from 'react';
 import Style from './Compliance.module.css';
-// import SemiCircles from './SemiCircles';
 import ComplianceGraphUsingD3 from './ComplianceGraphUsingD3';
 
 const ComplianceGraphBox = ({ graphData, others }) => {
@@ -12,14 +10,31 @@ const ComplianceGraphBox = ({ graphData, others }) => {
       setLoaded(true);
     }, 500);
 
-    return () => clearTimeout(timer); // Clear the timer if the component is unmounted
+    const handleResize = () => {
+      // Reload ComplianceGraphUsingD3 on window resize
+      setLoaded(false);
+      clearTimeout(timer);
+
+      const reloadTimer = setTimeout(() => {
+        setLoaded(true);
+      }, 500);
+
+      return () => clearTimeout(reloadTimer); // Clear the timer if the component is unmounted
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []); // Empty dependency array ensures this effect runs once after the initial render
 
   return (
     <div className={Style.ComplianceGraphBoxWapper}>
-    {loaded && (
-      <ComplianceGraphUsingD3 data={graphData} others={others} />
-    )}
+      {loaded && (
+        <ComplianceGraphUsingD3 data={graphData} others={others} />
+      )}
     </div>
   );
 };
