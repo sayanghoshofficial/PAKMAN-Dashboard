@@ -18,11 +18,11 @@ const ComplianceGraphUsingD3 = ({ data, others }) => {
         const centerY = svgHeight / 2;
 
 
-        const strokeWidth = svgHeight * 0.05;
+        const strokeWidth = svgHeight * 0.06;
 
         const renderArc = (index) => {
             const modifyPercentage = 100 - data[index].percentage;
-            const radius = centerY - strokeWidth - index * svgHeight * 0.06;
+            const radius = centerY - strokeWidth - index * svgHeight * 0.07;
             const endAngle = (modifyPercentage / 100) * Math.PI;
 
             const arcMain = d3.arc()
@@ -88,7 +88,7 @@ const ComplianceGraphUsingD3 = ({ data, others }) => {
 
         // Add text for "all Apps 99.82%"
         svg.append('text')
-            .attr('x', centerX + 30)
+            .attr('x', centerX + 20)
             .attr('y', centerY + (centerY * 0.04))  // Adjust the vertical position as needed
             .attr('text-anchor', 'end')
             .attr('fill', '#ed0295')
