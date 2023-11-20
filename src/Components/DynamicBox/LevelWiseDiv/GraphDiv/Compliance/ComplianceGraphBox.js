@@ -17,7 +17,7 @@ const ComplianceGraphBox = ({ graphData, others }) => {
 
       const reloadTimer = setTimeout(() => {
         setLoaded(true);
-      }, 500);
+      }, 1);
 
       return () => clearTimeout(reloadTimer); // Clear the timer if the component is unmounted
     };
