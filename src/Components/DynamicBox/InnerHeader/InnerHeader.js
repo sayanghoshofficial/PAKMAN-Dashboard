@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Style from './innerHeader.module.css';
 import fillterIcon from '../../../Assets/IconImage/filter-filled-tool-symbol.png';
 import chevronRightIcon from '../../../Assets/IconImage/right-chevron.png';
+import { Loader } from 'rsuite';
 
 const InnerHeader = ({ toggleDropDown, appValue, resetAppValue }) => {
+  const [innerHeaderDataValues, setInnerHeaderDataValues] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:4000/api/innerheaderdata');
+        const data = await response.json();
+        setInnerHeaderDataValues(data);
+        setLoading(false); // Set loading to false when data is fetched
+      } catch (err) {
+        console.error('Error fetching dropdown data:', err);
+        setLoading(false); // Set loading to false in case of an error
+      }
+    };
+    fetchData();
+  }, []);
 
 
   return (
@@ -20,7 +40,7 @@ const InnerHeader = ({ toggleDropDown, appValue, resetAppValue }) => {
           appValue.length > 0
           &&
           <>
-            <img src={chevronRightIcon} alt='chevron-right'/>
+            <img src={chevronRightIcon} alt='chevron-right' />
             <p>{appValue}</p>
           </>
 
@@ -31,9 +51,16 @@ const InnerHeader = ({ toggleDropDown, appValue, resetAppValue }) => {
         <div className={Style.ApplicationStatus}>
           <div className={Style.ApplicationStatusInnerDiv}>
             <p>APPLICATION STATUS:</p>
-            <p><b>43</b> PRODUCTION</p>
-            <p><b>7</b> BUILD</p>
-            <p><b>5</b> INTAKE</p>
+            {loading ?
+              <Loader content="Loading..." vertical />
+              :
+              innerHeaderDataValues.map((value, idx) => (
+                <p key={value._id}><b>{value.value}</b> {value.name}</p>
+              ))
+
+            }
+
+
           </div>
         </div>
         <div className={Style.Security}>

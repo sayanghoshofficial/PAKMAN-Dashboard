@@ -20,7 +20,7 @@ const AllApplication = ({ getApp, DropDownData }) => {
             {isAppBoxActive &&
                 <div className={Style.AppBox}>
                     {DropDownData.map((data, ind) => (
-                        <div className={Style.singleApp} key={ind}>
+                        <div className={Style.singleApp} key={data._id}>
                             <h2 onClick={() => getApp(data.name)}>{data.name}</h2>
                         </div>
 
