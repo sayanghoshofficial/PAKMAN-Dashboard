@@ -18,7 +18,7 @@ const BottomExtra = ({ data }) => {
                 <p>{formatNumber(animatedValue)}</p>
             </div>
             <div className={Style.unitAnother}>
-                <p>{data.bottomExtra?.anotherValue}</p>
+                <p>{data.bottomExtra?.anothervalue}</p>
             </div>
         </div>
     );

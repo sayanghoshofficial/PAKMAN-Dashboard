@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { DropDown, DynamicElement, Navbar } from "./Components";
 
 function App() {
@@ -10,6 +10,18 @@ function App() {
   const getApp = (value) => setAppValue(value);
 
   const resetAppValue = () => setAppValue('');
+
+  useEffect(() => {
+    const handleBodyOverflow = () => {
+      document.body.style.overflow = isDropDownActive ? 'hidden' : 'visible';
+    };
+
+    handleBodyOverflow();
+
+    return () => {
+      document.body.style.overflow = 'visible'; // Reset overflow when the component unmounts
+    };
+  }, [isDropDownActive]);
 
   return (
 
