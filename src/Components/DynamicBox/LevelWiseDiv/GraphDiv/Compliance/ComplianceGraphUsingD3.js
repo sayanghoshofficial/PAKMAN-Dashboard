@@ -84,7 +84,7 @@ const ComplianceGraphUsingD3 = ({ data, others }) => {
             .transition() // Add transition
             .duration(1000) // Set the duration of the transition in milliseconds
             .attr('font-size', '0.6rem')
-            .text('all Apps');
+            .text('All Apps');
 
         // Add text for "all Apps 99.82%"
         svg.append('text')
