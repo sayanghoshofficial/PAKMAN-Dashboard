@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Style from './graph.module.css';
 import {
   ResponsiveContainer,
@@ -11,9 +11,37 @@ import {
   Line,
   CartesianGrid
 } from 'recharts';
+import { Loader } from 'rsuite';
 
 
-const BarWithLineGraph = ({ graphData }) => {
+const BarWithLineGraph = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const addNameFromCreatedAt = (array) => {
+    const sortedArray = array.sort((a, b) => a.id - b.id);
+    return sortedArray.map(item => {
+      const name = item.createdAt.toString().slice(-3); // Get the last three characters of createdAt
+      return { ...item, name };
+    });
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:4000/api/cost');
+        const data = await response.json();
+        // Convert createdAt to month names
+        const convertedData = addNameFromCreatedAt(data)
+        setData(convertedData);
+        setLoading(false); // Set loading to false when data is fetched
+      } catch (err) {
+        console.error('Error fetching dropdown data:', err);
+        setLoading(false); // Set loading to false in case of an error
+      }
+    };
+    fetchData();
+  }, [])
 
   // Generate custom Y-axis ticks at intervals of $200,000
   const generateYAxisTicks = () => {
@@ -38,13 +66,16 @@ const BarWithLineGraph = ({ graphData }) => {
     const ticks = [0, 0.1, 0.2, 0.3, 0.4, 0.5];
     return ticks;
   };
+  if(loading){
+    return <Loader content="Loading..." vertical/>
+  }
 
   return (
     <div className={Style.GraphCointainer} >
       <div className={Style.graphWrapper}>
         <ResponsiveContainer width="100%" height="90%">
           <ComposedChart
-            data={graphData}
+            data={data}
             width={400}
             height={40}
             barGap={0}
@@ -72,27 +103,27 @@ const BarWithLineGraph = ({ graphData }) => {
 
               wrapperStyle={{ backgroundColor: '#292929ff' }}
               contentStyle={{ backgroundColor: 'rgba (0, 0, 0, 0.5)', border: 'none', color: '#fff' }}
-              labelStyle={{ display: 'none' }} 
-              />
-            <Legend 
-            wrapperStyle={{ fontSize: '10px', bottom: '-13px' }} 
+              labelStyle={{ display: 'none' }}
             />
-            <Bar 
-            dataKey='ACTUAL COST' 
-            fill='#ed0295' 
-            barSize={25} 
-            isAnimationActive={true}/>
-            <Bar 
-            dataKey="PROJECTED COST" 
-            fill='#cdcdcd' barSize={25} 
-            isAnimationActive={true}/>
-            <Line 
-            type="monotone" 
-            dataKey="ACTUAL RUN RATE" 
-            stroke="#ed0295" 
-            dot={false} 
-            isAnimationActive={true}
-            legendType='plainline'
+            <Legend
+              wrapperStyle={{ fontSize: '10px', bottom: '-13px' }}
+            />
+            <Bar
+              dataKey='ACTUAL COST'
+              fill='#ed0295'
+              barSize={25}
+              isAnimationActive={true} />
+            <Bar
+              dataKey="PROJECTED COST"
+              fill='#cdcdcd' barSize={25}
+              isAnimationActive={true} />
+            <Line
+              type="monotone"
+              dataKey="ACTUAL RUN RATE"
+              stroke="#ed0295"
+              dot={false}
+              isAnimationActive={true}
+              legendType='plainline'
             />
           </ComposedChart>
         </ResponsiveContainer>

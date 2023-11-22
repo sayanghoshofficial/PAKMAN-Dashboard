@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Style from './graph.module.css';
 import {
     CartesianGrid,
@@ -14,7 +14,7 @@ import {
 
 
 const LineGraphForInventory = ({ graphData }) => {
-
+    
     const generateYAxisTicks = () => {
         const ticks = [];
         for (let i = 0; i <= 1000; i += 200) {
@@ -76,7 +76,7 @@ const LineGraphForInventory = ({ graphData }) => {
                             strokeDasharray={[3, 2]}
                             dot={false}
                             isAnimationActive={true}
-                            
+
                         />
                         <Line
                             type="monotone"
@@ -91,7 +91,7 @@ const LineGraphForInventory = ({ graphData }) => {
                             type="monotone"
                             dataKey="Range"
                             stroke='none'
-                            fillOpacity={0.5} 
+                            fillOpacity={0.5}
                             fill="#cdcdcdff"
                             legendType='none'
                             tooltipType='none'

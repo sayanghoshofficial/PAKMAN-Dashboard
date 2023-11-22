@@ -3,7 +3,7 @@
 .GraphCointainer {
   width: 100%;
   height: 100%;
-  /* border: 2px solid gold; */
+  border: 2px solid gold;
   display: flex;
   align-items: center;
   justify-content: center;
