@@ -24,6 +24,7 @@
   justify-content: space-between;
 }
 .wrapperDiv {
+  position: relative;
   height: 100%;
   margin-bottom: 7px;
 }
@@ -32,12 +33,27 @@
   margin-bottom: 7px;
 }
 .bottomValueBox {
+  position: absolute;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #777777;
   font-weight: 500;
+  animation: bottomValueBoxAnimation 1s ease-in-out; /* Use animation property */
 }
+
+@keyframes bottomValueBoxAnimation {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 .graphBox {
   height: 90%;

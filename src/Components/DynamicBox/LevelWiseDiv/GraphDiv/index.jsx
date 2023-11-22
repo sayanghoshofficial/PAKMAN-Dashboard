@@ -3,7 +3,7 @@ import LineGraphForInventory from "./LineGraphForInventory";
 import MoniteringDataVisulition from "./Monitering/MoniteringDataVisulition";
 import UtilizationSemiCircle from "./Utilization/UtilizationSemiCircle";
 import GraphForUtilization from "./Utilization/GraphForUtilization";
-import GraphForStorage from "./GraphForStorage";
+import GraphForStorage from "./Storage/GraphForStorage";
 import { ComplianceBottomDivForLevelOne, ComplianceGraphBox } from "./Compliance";
 
 

@@ -2,6 +2,7 @@ import React from 'react';
 import Style from '../graph.module.css';
 
 const WapperDivForStorage = ({ ele }) => {
+   
     const addAlphaToColor = (color, alpha) => {
         const newColor = `rgba(${color.slice(4, -1)}, ${alpha})`;
         return newColor;
@@ -36,7 +37,7 @@ const WapperDivForStorage = ({ ele }) => {
                 <div className={Style.bottomDiv}></div>
             </div>
             <div className={Style.bottomValueBox}>
-                {ele.PBValue}PB
+                {ele.PBvalue}PB
             </div>
         </div>
     )
