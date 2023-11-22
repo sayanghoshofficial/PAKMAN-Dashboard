@@ -15,17 +15,17 @@ const LevelOneDiv = ({ data }) => {
 
   const graphSpaceSelector = (graphData) => {
     if (data.name === 'COST') {
-      return <BarWithLineGraph graphData={graphData} />
+      return <BarWithLineGraph />
     } else if (data.name === 'INVENTORY') {
-      return <LineGraphForInventory graphData={graphData} />
+      return <LineGraphForInventory />
     } else if (data.name === 'MONITORING') {
-      return <MoniteringDataVisulition graphData={graphData} />
+      return <MoniteringDataVisulition />
     } else if (data.name === 'UTILIZATION') {
-      return <GraphForUtilization graphData={graphData} />
+      return <GraphForUtilization />
     } else if (data.name === 'STORAGE') {
-      return <GraphForStorage graphData={graphData} />
+      return <GraphForStorage />
     } else if (data.name === 'COMPLIANCE') {
-      return <ComplianceGraphBox graphData={graphData} others={data.bottomContaint}/>
+      return <ComplianceGraphBox others={data.bottomContaint}/>
     }
     else {
       return null;

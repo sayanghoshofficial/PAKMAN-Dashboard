@@ -3,7 +3,7 @@ import Style from '../graph.module.css';
 import WapperDivForStorage from './WapperDivForStorage';
 import { Loader } from 'rsuite';
 
-const GraphForStorage = ({ graphData }) => {
+const GraphForStorage = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
