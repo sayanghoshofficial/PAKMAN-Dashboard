@@ -11,10 +11,45 @@ import {
     Legend,
     Area
 } from 'recharts';
+import { Loader } from 'rsuite';
 
 
-const LineGraphForInventory = ({ graphData }) => {
-    
+const LineGraphForInventory = () => {
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const convertDataForInventory = (dataArray) => {
+        const sortedArray = dataArray.sort((a, b) => a.id - b.id);
+        return sortedArray.map(item => {
+            const dateParts = item.createdAt.split('/');
+            const monthIndex = Number(dateParts[1]) - 1;
+            const monthName = monthIndex >= 0 && monthIndex < 12
+                ? ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'][monthIndex]
+                : 'Invalid Month';
+
+            const formattedDate = `${monthName} ${dateParts[0]}`;
+            const Range = [item['MIN INTANCES'], item['MAX INTANCES']];
+
+            return { ...item, name: formattedDate, Range };
+        });
+    };
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://localhost:4000/api/inventory');
+                const data = await response.json();
+                const convertedData = convertDataForInventory(data)
+                setData(convertedData);
+                
+                setLoading(false); // Set loading to false when data is fetched
+            } catch (err) {
+                console.error('Error fetching dropdown data:', err);
+                setLoading(false); // Set loading to false in case of an error
+            }
+        };
+        fetchData();
+    }, [])
     const generateYAxisTicks = () => {
         const ticks = [];
         for (let i = 0; i <= 1000; i += 200) {
@@ -27,12 +62,17 @@ const LineGraphForInventory = ({ graphData }) => {
         if (tick === 1000) return '1K'
         return tick;
     }
+
+    if(loading){
+        return <Loader content="Loading..." vertical/>
+      }
+
     return (
         <div className={Style.GraphCointainer} >
             <div className={Style.graphWrapper}>
                 <ResponsiveContainer>
                     <ComposedChart
-                        data={graphData}
+                        data={data}
                         width={400}
                         height={40}
                     >

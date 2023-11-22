@@ -21,10 +21,18 @@ const BarWithLineGraph = () => {
   const addNameFromCreatedAt = (array) => {
     const sortedArray = array.sort((a, b) => a.id - b.id);
     return sortedArray.map(item => {
-      const name = item.createdAt.toString().slice(-3); // Get the last three characters of createdAt
+      const dateParts = item.createdAt.split('/');
+      const monthIndex = Number(dateParts[1]) - 1;
+  
+      const name = monthIndex >= 0 && monthIndex < 12
+        ? ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'][monthIndex]
+        : 'Invalid Month';
+  
       return { ...item, name };
     });
   };
+  
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -66,6 +74,7 @@ const BarWithLineGraph = () => {
     const ticks = [0, 0.1, 0.2, 0.3, 0.4, 0.5];
     return ticks;
   };
+  
   if(loading){
     return <Loader content="Loading..." vertical/>
   }
