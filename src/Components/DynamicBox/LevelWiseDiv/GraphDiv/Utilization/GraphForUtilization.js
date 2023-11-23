@@ -4,6 +4,7 @@ import FirstGraph from './FirstGraph';
 import SecondGraph from './SecondGraph';
 import ThirdGraph from './ThirdGraph';
 import { Loader } from 'rsuite';
+import { apiUrl } from '../../../../../Constant';
 
 const GraphForUtilization = ({ graphData }) => {
   const [data, setData] = useState([]);
@@ -13,7 +14,7 @@ const GraphForUtilization = ({ graphData }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/utilization');
+        const response = await fetch(`${apiUrl}utilization`);
         const data = await response.json();
         // console.log('Raw Data:', data);
         const sortedData = data.sort((a, b) => a.id - b.id);

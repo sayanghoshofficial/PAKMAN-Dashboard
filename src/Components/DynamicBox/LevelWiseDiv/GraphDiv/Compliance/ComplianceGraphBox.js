@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Style from './Compliance.module.css';
 import ComplianceGraphUsingD3 from './ComplianceGraphUsingD3';
 import { Loader } from 'rsuite';
+import { apiUrl } from '../../../../../Constant';
 
 const ComplianceGraphBox = ({ graphData, others }) => {
   const [loaded, setLoaded] = useState(false);
@@ -11,7 +12,7 @@ const ComplianceGraphBox = ({ graphData, others }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/compliance');
+        const response = await fetch(`${apiUrl}compliance`);
         const data = await response.json();
         // console.log('Raw Data:', data);
         const sortedData = data.sort((a, b) => a.id - b.id);
@@ -53,8 +54,8 @@ const ComplianceGraphBox = ({ graphData, others }) => {
     };
   }, []); // Empty dependency array ensures this effect runs once after the initial render
 
-  if(loading){
-    return <Loader content="Loading..." vertical/>
+  if (loading) {
+    return <Loader content="Loading..." vertical />
   }
 
   return (

@@ -12,6 +12,7 @@ import {
     Area
 } from 'recharts';
 import { Loader } from 'rsuite';
+import { apiUrl } from '../../../../Constant';
 
 
 const LineGraphForInventory = () => {
@@ -37,11 +38,11 @@ const LineGraphForInventory = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:4000/api/inventory');
+                const response = await fetch(`${apiUrl}inventory`);
                 const data = await response.json();
                 const convertedData = convertDataForInventory(data)
                 setData(convertedData);
-                
+
                 setLoading(false); // Set loading to false when data is fetched
             } catch (err) {
                 console.error('Error fetching dropdown data:', err);
@@ -63,9 +64,9 @@ const LineGraphForInventory = () => {
         return tick;
     }
 
-    if(loading){
-        return <Loader content="Loading..." vertical/>
-      }
+    if (loading) {
+        return <Loader content="Loading..." vertical />
+    }
 
     return (
         <div className={Style.GraphCointainer} >

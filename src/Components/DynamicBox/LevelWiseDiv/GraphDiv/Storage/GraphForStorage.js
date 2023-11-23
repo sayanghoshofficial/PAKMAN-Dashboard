@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Style from '../graph.module.css';
 import WapperDivForStorage from './WapperDivForStorage';
 import { Loader } from 'rsuite';
+import { apiUrl } from '../../../../../Constant'
 
 const GraphForStorage = () => {
   const [data, setData] = useState([]);
@@ -11,7 +12,7 @@ const GraphForStorage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/storage');
+        const response = await fetch(`${apiUrl}storage`);
         const data = await response.json();
         // console.log('Raw Data:', data);
         const sortedData = data.sort((a, b) => a.id - b.id);
@@ -27,8 +28,8 @@ const GraphForStorage = () => {
     fetchData();
   }, []);
 
-  if(loading){
-    return <Loader content="Loading..." vertical/>
+  if (loading) {
+    return <Loader content="Loading..." vertical />
   }
 
   return (

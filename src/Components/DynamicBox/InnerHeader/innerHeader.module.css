@@ -22,6 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  transition: all 0.3s ease-in-out;
 }
 .fillterApplication > p {
   font-weight: 700;
@@ -69,6 +70,7 @@
   font-size: 1rem;
   font-weight: 700;
   color: white;
+  transition: all 0.3s ease-in-out;
 }
 .greenDot {
   margin-left: 10px;
@@ -103,4 +105,12 @@
     width: 90%;
     margin-bottom: 15px;
   }
+}
+@media screen and (max-width:800px) {
+.fillterApplication > p {
+  font-size: 0.6rem;
+}
+.Security {
+ font-size: 0.5rem;
+}
 }

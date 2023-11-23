@@ -12,6 +12,7 @@ import {
   CartesianGrid
 } from 'recharts';
 import { Loader } from 'rsuite';
+import { apiUrl } from '../../../../Constant';
 
 
 const BarWithLineGraph = () => {
@@ -23,21 +24,21 @@ const BarWithLineGraph = () => {
     return sortedArray.map(item => {
       const dateParts = item.createdAt.split('/');
       const monthIndex = Number(dateParts[1]) - 1;
-  
+
       const name = monthIndex >= 0 && monthIndex < 12
         ? ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'][monthIndex]
         : 'Invalid Month';
-  
+
       return { ...item, name };
     });
   };
-  
-  
+
+
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/cost');
+        const response = await fetch(`${apiUrl}cost`);
         const data = await response.json();
         // Convert createdAt to month names
         const convertedData = addNameFromCreatedAt(data)
@@ -74,9 +75,9 @@ const BarWithLineGraph = () => {
     const ticks = [0, 0.1, 0.2, 0.3, 0.4, 0.5];
     return ticks;
   };
-  
-  if(loading){
-    return <Loader content="Loading..." vertical/>
+
+  if (loading) {
+    return <Loader content="Loading..." vertical />
   }
 
   return (

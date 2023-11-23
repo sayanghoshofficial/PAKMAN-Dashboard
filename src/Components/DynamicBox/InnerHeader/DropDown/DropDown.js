@@ -3,6 +3,7 @@ import Style from './Dropdown.module.css';
 import SearchBox from './SearchBox';
 import AllApplication from './AllApplication';
 import { Loader } from 'rsuite';
+import { apiUrl } from '../../../../Constant';
 
 const DropDown = ({ toggleDropDown, getApp }) => {
   const [searchInput, setSearchInput] = useState('');
@@ -20,7 +21,7 @@ const DropDown = ({ toggleDropDown, getApp }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/dropdown');
+        const response = await fetch(`${apiUrl}dropdown`);
         const data = await response.json();
         setDropdownData(data);
         setLoading(false); // Set loading to false when data is fetched

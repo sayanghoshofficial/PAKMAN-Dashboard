@@ -4,6 +4,7 @@ import InnerHeader from './InnerHeader/InnerHeader';
 import { DynamicElementClassData } from '../../Data';
 import { LevelOneDiv, LevelTwoDiv, LevelThreeDiv } from './LevelWiseDiv';
 import { Loader } from 'rsuite';
+import { apiUrl } from '../../Constant';
 
 const DynamicElement = ({ toggleDropDown, appValue, resetAppValue }) => {
     const [classes, setClasses] = useState(DynamicElementClassData[0]);
@@ -13,7 +14,7 @@ const DynamicElement = ({ toggleDropDown, appValue, resetAppValue }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:4000/api/dynamicelement');
+                const response = await fetch(`${apiUrl}dynamicelement`);
                 const data = await response.json();
                 // console.log('Raw Data:', data);
                 const sortedData = data.sort((a, b) => a.id - b.id);

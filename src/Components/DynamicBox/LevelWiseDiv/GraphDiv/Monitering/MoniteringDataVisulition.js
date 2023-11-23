@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Style from './moniteringData.module.css';
 import BoxElem from './BoxElem';
 import { Loader } from 'rsuite';
+import { apiUrl } from '../../../../../Constant';
 
 const MoniteringDataVisulition = () => {
   const [data, setData] = useState([]);
@@ -11,7 +12,7 @@ const MoniteringDataVisulition = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/monitoring');
+        const response = await fetch(`${apiUrl}monitoring`);
         const data = await response.json();
         // console.log('Raw Data:', data);
         const sortedData = data.sort((a, b) => a.id - b.id);
@@ -38,8 +39,8 @@ const MoniteringDataVisulition = () => {
     }
   };
 
-  if(loading){
-    return <Loader content="Loading..." vertical/>
+  if (loading) {
+    return <Loader content="Loading..." vertical />
   }
 
   return (

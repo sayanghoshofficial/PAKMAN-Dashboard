@@ -3,6 +3,7 @@ import Style from './innerHeader.module.css';
 import fillterIcon from '../../../Assets/IconImage/filter-filled-tool-symbol.png';
 import chevronRightIcon from '../../../Assets/IconImage/right-chevron.png';
 import { Loader } from 'rsuite';
+import { apiUrl } from '../../../Constant';
 
 const InnerHeader = ({ toggleDropDown, appValue, resetAppValue }) => {
   const [innerHeaderDataValues, setInnerHeaderDataValues] = useState([]);
@@ -13,7 +14,7 @@ const InnerHeader = ({ toggleDropDown, appValue, resetAppValue }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/innerheaderdata');
+        const response = await fetch(`${apiUrl}innerheaderdata`);
         const data = await response.json();
         setInnerHeaderDataValues(data);
         setLoading(false); // Set loading to false when data is fetched

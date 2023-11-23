@@ -217,8 +217,8 @@
   .LevelThreeDivContainer {
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   .nameAndLogoThree > img {
     width: 30px;
@@ -266,5 +266,32 @@
   .bottomExtraForLevelTwo,
   .bottomExtraForThirdLevel {
     display: none;
+  }
+  .LevelTwoDivContainer,
+  .LevelThreeDivContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .nameAndLogoThree,.nameAndLogoTwo,.nameAndLogo {
+    font-size: 1rem;
+  }
+ 
+  .nameAndLogo > img {
+    width: 20px;
+    height: 20px;
+  }
+  .nameAndLogoThree > img {
+    width: 20px;
+    height: 20px;
+  }
+  .nameAndLogoTwo> img {
+    width: 20px;
+    height: 20px;
+  }
+  .BigValue {
+    font-size: 1.5rem;
+  }
+  .unit{
+    font-size: 0.6rem;
   }
 }
