@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PAKMAN-Dashboard/static/css/main.a7735c76.css",
-    "main.js": "/PAKMAN-Dashboard/static/js/main.dc5b5d46.js",
+    "main.js": "/PAKMAN-Dashboard/static/js/main.fa447b5d.js",
     "static/media/pacman_bg.jpg": "/PAKMAN-Dashboard/static/media/pacman_bg.26e3dad7d87fb7b904fd.jpg",
     "static/media/profile-user.png": "/PAKMAN-Dashboard/static/media/profile-user.c915bcabfc0398d9f567.png",
     "static/media/filter-filled-tool-symbol.png": "/PAKMAN-Dashboard/static/media/filter-filled-tool-symbol.1861549bf251a253cd65.png",
@@ -13,10 +13,10 @@
     "index.html": "/PAKMAN-Dashboard/index.html",
     "static/media/menu.svg": "/PAKMAN-Dashboard/static/media/menu.a06dab493864f86c675e32cc85d2e191.svg",
     "main.a7735c76.css.map": "/PAKMAN-Dashboard/static/css/main.a7735c76.css.map",
-    "main.dc5b5d46.js.map": "/PAKMAN-Dashboard/static/js/main.dc5b5d46.js.map"
+    "main.fa447b5d.js.map": "/PAKMAN-Dashboard/static/js/main.fa447b5d.js.map"
   },
   "entrypoints": [
     "static/css/main.a7735c76.css",
-    "static/js/main.dc5b5d46.js"
+    "static/js/main.fa447b5d.js"
   ]
 }
