@@ -47,7 +47,7 @@ const MoniteringDataVisulition = () => {
     <div className={Style.MoniteringDataVisulitionWapper}>
       {data.map((ele, idx) => (
         <div className={Style.BoxElemWapper} key={ele._id}>
-          <BoxElem key={idx} color={colorDiv(ele.value)} />
+          <BoxElem key={idx} color={colorDiv(ele.value)} value={ele.value} />
         </div>
 
       ))}

@@ -16,7 +16,8 @@ const InnerHeader = ({ toggleDropDown, appValue, resetAppValue }) => {
       try {
         const response = await fetch(`${apiUrl}innerheaderdata`);
         const data = await response.json();
-        setInnerHeaderDataValues(data);
+        const sortedData = data.sort((a, b) => a.id - b.id);
+        setInnerHeaderDataValues(sortedData);
         setLoading(false); // Set loading to false when data is fetched
       } catch (err) {
         console.error('Error fetching dropdown data:', err);
@@ -56,7 +57,7 @@ const InnerHeader = ({ toggleDropDown, appValue, resetAppValue }) => {
               <Loader content="Loading..." vertical />
               :
               innerHeaderDataValues.map((value, idx) => (
-                <p key={value._id}><b>{value.value}</b> {value.name}</p>
+                <p style={{color:'#807777'}} key={value._id}><b>{value.value}</b> {value.name}</p>
               ))
 
             }
